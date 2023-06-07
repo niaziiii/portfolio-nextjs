@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
+import BackgroundAnimation from "../components/BackgroundAnimation/index";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${inter.className}`}>
+        <BackgroundAnimation />
+        <main className="bg-backgroundMain min-h-screen">{children}</main>
+      </body>
     </html>
   );
 }
