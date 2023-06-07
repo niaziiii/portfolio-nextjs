@@ -1,6 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { BackgroundAnimation, NavigationBar } from "../components";
+import { BackgroundAnimation, NavigationBar, Footer } from "../components";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,6 +21,7 @@ export default function RootLayout({
         <BackgroundAnimation />
         <NavigationBar />
         <main className="bg-main-2 min-h-screen">{children}</main>
+        <Footer />
       </body>
     </html>
   );
