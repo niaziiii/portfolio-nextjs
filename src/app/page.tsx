@@ -1,3 +1,13 @@
+"use client";
+import React from "react";
+
+import { HeroSection, MySelf, FindMe } from "@/components";
 export default function Home() {
-  return <main>hello wolrd</main>;
+  return (
+    <>
+      <HeroSection />
+      <MySelf />
+      <FindMe />
+    </>
+  );
 }
