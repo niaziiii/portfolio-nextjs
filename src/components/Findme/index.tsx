@@ -17,7 +17,7 @@ const index = () => {
         <li className="bg-white rounded-full custom-shadow">
           <a
             href="https://github.com/niaziiii"
-            className=" text-3xl cursor-pointer text-main"
+            className=" text-3xl cursor-pointer text-black"
           >
             <AiFillGithub />
           </a>
@@ -25,7 +25,7 @@ const index = () => {
         <li className="bg-white rounded-full custom-shadow">
           <a
             href="https://twitter.com/MuhabatNiazi"
-            className=" text-3xl cursor-pointer text-main"
+            className=" text-3xl cursor-pointer text-black"
           >
             <AiOutlineTwitter />
           </a>
@@ -33,7 +33,7 @@ const index = () => {
         <li className="bg-white rounded-full custom-shadow">
           <a
             href="https://www.linkedin.com/in/muhabat-khan-niazi-926854192/"
-            className=" text-3xl cursor-pointer text-main"
+            className=" text-3xl cursor-pointer text-black"
           >
             <AiFillLinkedin />
           </a>
@@ -41,7 +41,7 @@ const index = () => {
         <li className="bg-white rounded-full custom-shadow">
           <a
             href="tel:923083909131"
-            className=" text-3xl cursor-pointer text-main"
+            className=" text-3xl cursor-pointer text-black"
           >
             <AiOutlineWhatsApp />
           </a>

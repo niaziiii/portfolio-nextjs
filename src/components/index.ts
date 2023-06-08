@@ -1,4 +1,4 @@
-import BackgroundAnimation from "./BackgroundAnimation";
+import BackgroundCoverImage from "./BackgroundCoverImage";
 import NavigationBar from "./NavigationBar";
 import Footer from "./Footer";
 import Introduction from "./Introduction";
@@ -7,7 +7,7 @@ import MySelf from "./Myself";
 import FindMe from "./Findme";
 
 export {
-  BackgroundAnimation,
+  BackgroundCoverImage,
   NavigationBar,
   Footer,
   Introduction,

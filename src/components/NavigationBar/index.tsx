@@ -33,7 +33,7 @@ const index = () => {
   };
 
   return (
-    <div className="z-10 text-white sticky top-0 left-0 py-4 w-full bg-main">
+    <div className="z-10 text-white sticky top-0 left-0 py-4 w-full bg-main backdrop-blur-md opacity-90">
       {scrollPosition > 100 && (
         <div className="w-full absolute transition top-0 left-0 p-4 h-full navbarContainer"></div>
       )}
