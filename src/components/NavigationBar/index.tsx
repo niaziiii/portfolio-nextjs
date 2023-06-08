@@ -13,7 +13,7 @@ import {
   AiOutlineClose,
 } from "react-icons/ai";
 
-const index = () => {
+const NavigationBar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isOpen, setisOpen] = useState(false);
   const ref: any = useRef();
@@ -165,4 +165,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default NavigationBar;

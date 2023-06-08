@@ -1,17 +1,17 @@
 "use client";
 import React, { useState, useRef } from "react";
 
-interface Specialties {
+interface SpecialtiesType {
   name: string;
   icon: React.ReactNode;
   background: string;
 }
 
-const index = ({ data }: { data: Specialties[] }) => {
+const Specialties = ({ data }: { data: SpecialtiesType[] }) => {
   const [_, setIsHovered] = useState(false);
   const ref = useRef();
 
-  const handleMouseEnter = (event: any, data: Specialties) => {
+  const handleMouseEnter = (event: any, data: SpecialtiesType) => {
     const classess = [...event.target.classList];
     if (classess.includes("skills"))
       event.target.style.boxShadow = `0 0 5px 2px ${data.background}`;
@@ -26,7 +26,7 @@ const index = ({ data }: { data: Specialties[] }) => {
 
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 w-full rounded-sm">
-      {data.map((el: Specialties, i: number) => (
+      {data.map((el: SpecialtiesType, i: number) => (
         <div
           key={i}
           onMouseEnter={(e) => handleMouseEnter(e, el)}
@@ -44,4 +44,4 @@ const index = ({ data }: { data: Specialties[] }) => {
   );
 };
 
-export default index;
+export default Specialties;

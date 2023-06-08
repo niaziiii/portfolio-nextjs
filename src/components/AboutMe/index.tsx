@@ -3,7 +3,7 @@ import { GiCook, GiHiking, GiBookCover } from "react-icons/gi";
 import hobbyAnimation from "../../assets/animations/hobby__animation.json";
 import Lottie from "lottie-react";
 
-const index = () => {
+const AboutMe = () => {
   return (
     <div>
       <div className="flex justify-between items-center flex-col min-h-1/3 md:flex-row">
@@ -43,4 +43,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default AboutMe;

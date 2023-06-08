@@ -4,7 +4,7 @@ import homeAnimation from "../../assets/animations/home__animation.json";
 import handAnimation from "../../assets/animations/hand__animation.json";
 import { Introduction } from "../../components";
 
-const index = () => {
+const HeroSection = () => {
   return (
     <div className="flex flex-col items-center justify-around min-h-1/3 m-auto md:flex-row  text-white">
       <div className=" flex flex-col mt-8  md:mt-0">
@@ -29,4 +29,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default HeroSection;

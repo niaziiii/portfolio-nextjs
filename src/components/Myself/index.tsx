@@ -2,7 +2,7 @@ import React from "react";
 import avatar from "../../assets/images/intro.jpg";
 import Image from "next/image";
 
-const index = () => {
+const MySelf = () => {
   return (
     <div className=" m-auto text-white flex flex-col mt-16 md:flex-row">
       <div className="mb-8">
@@ -52,4 +52,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default MySelf;

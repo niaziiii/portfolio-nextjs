@@ -7,7 +7,7 @@ import {
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 
-const index = () => {
+const Footer = () => {
   return (
     <div className="bg-black py-4 text-white ">
       <div className="w-11/12 gap-3  m-auto flex flex-col  items-center justify-between md:grid md:grid-cols-3 md:w-full md:px-4 lg:px-0  lg:w-4/5 ">
@@ -59,4 +59,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Footer;

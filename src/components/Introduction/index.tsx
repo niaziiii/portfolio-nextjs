@@ -1,7 +1,7 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-const index = () => {
+const Introduction = () => {
   const Im: string[] = [
     "Node Js Developer",
     "Graphql Developer",
@@ -26,7 +26,7 @@ const index = () => {
     return () => {
       clearInterval(interval);
     };
-  }, []);
+  }, [Im.length]);
 
   return (
     <div>
@@ -42,4 +42,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Introduction;

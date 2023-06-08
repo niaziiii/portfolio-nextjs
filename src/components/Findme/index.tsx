@@ -6,7 +6,7 @@ import {
   AiOutlineWhatsApp,
 } from "react-icons/ai";
 
-const index = () => {
+const FindMe = () => {
   return (
     <div className="text-white text-center mt-12 pb-12">
       <h1 className=" text-2xl md:text-4xl mb-2 text-center">FIND ME ON</h1>
@@ -51,4 +51,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default FindMe;
