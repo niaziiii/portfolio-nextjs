@@ -17,10 +17,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
+      <body
+        className={`${inter.className} bg-main-2 min-h-screen overflow-x-hidden`}
+      >
         <BackgroundCoverImage />
         <NavigationBar />
-        <main className="bg-main-2 min-h-screen">{children}</main>
+        <main className="   w-11/12 lg:w-4/5 m-auto">{children}</main>
         <Footer />
       </body>
     </html>

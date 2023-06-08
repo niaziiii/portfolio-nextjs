@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const index = () => {
   return (
-    <div className="w-11/12 lg:w-4/5 m-auto text-white flex flex-col mt-16 md:flex-row">
+    <div className=" m-auto text-white flex flex-col mt-16 md:flex-row">
       <div className="mb-8">
         <div className="w-full md:w-4/5">
           <h1 className=" text-2xl md:text-4xl mb-10 text-center">
