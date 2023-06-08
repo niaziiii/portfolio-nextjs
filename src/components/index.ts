@@ -1,12 +1,12 @@
-import BackgroundCoverImage from "./BackgroundCoverImage";
-import NavigationBar from "./NavigationBar";
-import Footer from "./Footer";
-import Introduction from "./Introduction";
-import HeroSection from "./HeroSection";
-import MySelf from "./Myself";
-import FindMe from "./Findme";
-import AboutMeIntroduction from "./AboutMe";
-import Specialties from "./Specialties";
+import BackgroundCoverImage from "./BackgroundCoverImage/BackgroundCoverImage";
+import NavigationBar from "./NavigationBar/NavigationBar";
+import Footer from "./Footer/Footer";
+import Introduction from "./Introduction/Introduction";
+import HeroSection from "./HeroSection/HeroSection";
+import MySelf from "./Myself/Myself";
+import FindMe from "./Findme/Findme";
+import AboutMeIntroduction from "./AboutMe/AboutMe";
+import Specialties from "./Specialties/Specialties";
 
 export {
   // layout components

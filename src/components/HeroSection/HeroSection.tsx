@@ -2,7 +2,7 @@ import React from "react";
 import Lottie from "lottie-react";
 import homeAnimation from "../../assets/animations/home__animation.json";
 import handAnimation from "../../assets/animations/hand__animation.json";
-import { Introduction } from "../../components";
+import { Introduction } from "..";
 
 const HeroSection = () => {
   return (
