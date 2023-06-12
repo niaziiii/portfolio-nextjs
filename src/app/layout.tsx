@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import { BackgroundCoverImage, NavigationBar, Footer } from "../components";
-
+import { NavigationBar, Footer } from "../components";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,9 +17,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} bg-main-2 min-h-screen overflow-x-hidden`}
+        style={{
+          backgroundImage: `url(./bg.jpg)`,
+          backgroundColor: "black",
+        }}
+        className={`${inter.className} min-h-screen overflow-x-hidden`}
       >
-        <BackgroundCoverImage />
         <NavigationBar />
         <main className="   w-11/12 lg:w-4/5 m-auto">{children}</main>
         <Footer />

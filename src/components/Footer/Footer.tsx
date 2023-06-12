@@ -1,5 +1,5 @@
 import React from "react";
-import { FaReact } from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
 import {
   AiFillGithub,
   AiOutlineTwitter,
@@ -9,12 +9,12 @@ import {
 
 const Footer = () => {
   return (
-    <div className="bg-black py-4 text-white ">
+    <div className="py-4 text-white ">
       <div className="w-11/12 gap-3  m-auto flex flex-col  items-center justify-between md:grid md:grid-cols-3 md:w-full md:px-4 lg:px-0  lg:w-4/5 ">
         <h2 className=" truncate  flex items-center gap-2 text-lg md:mb-0">
           Developed using
-          <b className="text-main flex  items-center">
-            React.js &nbsp; <FaReact className="text-blue-400" />
+          <b className="text-main flex  items-center text-2xl">
+            Next.js &nbsp; <TbBrandNextjs className="text-blue-400" />
           </b>
         </h2>
         <h2 className="flex-1   text-center">

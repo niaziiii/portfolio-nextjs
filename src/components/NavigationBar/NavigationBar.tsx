@@ -33,7 +33,7 @@ const NavigationBar = () => {
   };
 
   return (
-    <div className="z-10 text-white sticky top-0 left-0 py-4 w-full bg-main backdrop-blur-md opacity-90">
+    <div className="z-10 text-white sticky top-0 left-0 py-4 w-full backdrop-blur-md opacity-90">
       {scrollPosition > 100 && (
         <div className="w-full absolute transition top-0 left-0 p-4 h-full navbarContainer"></div>
       )}
@@ -60,9 +60,9 @@ const NavigationBar = () => {
             </Link>
           </li>
           <li className="delay-200 ease-in-out ">
-            <Link className="flex gap-y-px items-center" href="/projects">
+            <Link className="flex gap-y-px items-center" href="/experience">
               <AiOutlineFileText fontSize={20} />
-              <p className="pl-1 text-xl">Projects</p>
+              <p className="pl-1 text-xl">Experience</p>
             </Link>
           </li>
           <li className="delay-200 ease-in-out ">
@@ -131,10 +131,10 @@ const NavigationBar = () => {
               <Link
                 onClick={closeNavBar}
                 className="flex gap-y-px justify-center items-center"
-                href="/projects"
+                href="/experience"
               >
                 <AiOutlineFileText fontSize={20} />
-                <p className="pl-1 text-xl">Projects</p>
+                <p className="pl-1 text-xl">Experience</p>
               </Link>
             </li>
             <li className="mb-8 py-2 px-6 bg-btn border-b rounded opacity-100">
