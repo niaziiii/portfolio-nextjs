@@ -1,4 +1,3 @@
-import BackgroundCoverImage from "./BackgroundCoverImage/BackgroundCoverImage";
 import NavigationBar from "./NavigationBar/NavigationBar";
 import Footer from "./Footer/Footer";
 import Introduction from "./Introduction/Introduction";
@@ -7,10 +6,10 @@ import MySelf from "./Myself/Myself";
 import FindMe from "./Findme/Findme";
 import AboutMeIntroduction from "./AboutMe/AboutMe";
 import Specialties from "./Specialties/Specialties";
+import VerticalLinearStepper from "./Stepper/Stepper";
 
 export {
   // layout components
-  BackgroundCoverImage,
   NavigationBar,
   Footer,
 
@@ -23,4 +22,7 @@ export {
   // about page components
   AboutMeIntroduction,
   Specialties,
+
+  // experince page components
+  VerticalLinearStepper,
 };
