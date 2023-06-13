@@ -33,7 +33,7 @@ const ImagePreview = ({
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
-            height: zoomed ? "100vh" : "60vh",
+            height: zoomed ? "100vh" : "50vh",
             overflow: "hidden",
             cursor: zoomed ? "zoom-out" : "zoom-in",
             width: "100vw",
@@ -78,12 +78,12 @@ const ExperienceImageComponent = ({ images }: { images: any[] }) => {
     >
       {images?.map((image, i) => (
         <Image
-          className="cursor-pointer"
           key={i}
           src={image}
           alt="experience-images"
+          className="experience-images cursor-pointer"
           width={250}
-          height={200}
+          height={250}
           onClick={() => handleImageClick(image)}
         />
       ))}

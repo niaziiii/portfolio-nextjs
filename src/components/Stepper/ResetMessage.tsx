@@ -6,20 +6,10 @@ const ResetComponent = ({ handleReset }: { handleReset: () => void }) => {
     <Paper
       square
       elevation={2}
-      sx={{
-        p: 3,
-        width: "100%",
-        mt: 12,
-        textAlign: "center",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        gap: 5,
-        backgroundColor: "transparent",
-        color: "white",
-      }}
+      className="w-full flex flex-col md:flex-row items-center justify-center text-center gap-2 md:gap-5 p-1 md:p-3 "
+      sx={{ mt: 12, color: "white", background: "transparent" }}
     >
-      <Typography sx={{ fontSize: "1.5rem" }}>
+      <Typography className="text-lg md:text-2xl ">
         My industrial experience so far.
       </Typography>
       <Button

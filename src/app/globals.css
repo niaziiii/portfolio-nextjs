@@ -44,6 +44,11 @@
   box-shadow: 0 0 2px 5px rgb(17 95 221);
 }
 
+.experience-images {
+  width: 175px;
+  height: 150px;
+  object-fit: fill;
+}
 .typing {
   position: relative;
 }
