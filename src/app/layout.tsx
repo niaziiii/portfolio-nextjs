@@ -16,12 +16,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <html lang="en">
       <Head>
-        <meta property="og:title" content={metadata.title} />
-        <meta property="og:description" content={metadata.description} />
+        <meta
+          property="og:image"
+          content="https://lh3.googleusercontent.com/a-/AD_cMMS_9EcMPb9JnC6qxUDEcka65Vo1T-LtqNDpPGw1sg=s64-p-k-rw-no"
+        />
       </Head>
-      <div
+      <body
         style={{
           backgroundImage: `url(./bg.jpg)`,
           backgroundColor: "black",
@@ -29,9 +31,9 @@ export default function RootLayout({
         className={`${inter.className} min-h-screen overflow-x-hidden`}
       >
         <NavigationBar />
-        <main className="w-11/12 lg:w-4/5 m-auto">{children}</main>
+        <main className="   w-11/12 lg:w-4/5 m-auto">{children}</main>
         <Footer />
-      </div>
-    </>
+      </body>
+    </html>
   );
 }
