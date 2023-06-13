@@ -32,8 +32,12 @@
   height: auto !important;
 }
 
-.text-main {
-  color: rgb(17 95 221);
+.text-main,
+.css-4ff9q7.Mui-completed,
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active,
+.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
+  color: rgb(17 95 221) !important;
+
   font-weight: 700;
 }
 

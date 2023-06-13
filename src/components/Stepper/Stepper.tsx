@@ -29,16 +29,18 @@ export default function VerticalLinearStepper() {
   return (
     <>
       <Box sx={{ maxWidth: "calc(100% - 10%)" }}>
-        <Stepper
-          activeStep={activeStep}
-          orientation="vertical"
-          sx={{ color: "white !important" }}
-        >
+        <Stepper activeStep={activeStep} orientation="vertical">
           {experienceSteps.map((step, index) => (
             <Step key={step.label}>
               <StepLabel sx={{ color: "white !important" }}>
-                <Typography variant="h6"> {step.label}</Typography>
-                <Typography variant="h6" sx={{ fontSize: ".8rem" }}>
+                <Typography variant="h6" className="text-main">
+                  {step.label}
+                </Typography>
+                <Typography
+                  variant="h6"
+                  className="text-main"
+                  sx={{ fontSize: ".8rem", ml: 3 }}
+                >
                   {step?.date}
                 </Typography>
               </StepLabel>
