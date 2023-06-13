@@ -7,7 +7,7 @@ const MySelf = () => {
     <div className=" m-auto text-white flex flex-col mt-16 md:flex-row">
       <div className="mb-8">
         <div className="w-full md:w-4/5">
-          <h1 className=" text-2xl md:text-4xl mb-10 text-center">
+          <h1 className=" text-2xl md:text-4xl mb-5 md:mb-10 md:text-center">
             LET ME <b className="text-main">INTRODUCE</b> MYSELF{" "}
           </h1>
           <p className="text-base md:text-xl mt-6">

@@ -33,7 +33,7 @@
 }
 
 .text-main {
-  color: rgb(59 130 246 / 0.5);
+  color: rgb(17 95 221);
   font-weight: 700;
 }
 
@@ -41,7 +41,7 @@
   transition: 0.2s linear;
 }
 .custom-shadow:hover {
-  box-shadow: 0 0 2px 5px rgb(59 130 246 / 0.5);
+  box-shadow: 0 0 2px 5px rgb(17 95 221);
 }
 
 .typing {

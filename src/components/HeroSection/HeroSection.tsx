@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <div className="flex flex-col items-center justify-around min-h-1/3 m-auto md:flex-row  text-white">
       <div className=" flex flex-col mt-8  md:mt-0">
-        <h2 className="text-4xl font-extrabolde flex  items-center mb-4 md:mb-7 md:text-3xl">
+        <h2 className="text-xl font-extrabolde flex  items-end mb-4 md:mb-7 md:text-2xl">
           Hi There!
           <i className="w-14">
             <Lottie animationData={handAnimation} />
