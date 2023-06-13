@@ -6,12 +6,33 @@ import {
   AiOutlineHome,
   AiOutlineUser,
   AiOutlineFileText,
-  AiOutlineFundProjectionScreen,
   AiOutlineGithub,
   AiOutlineAlignRight,
-  AiOutlineStar,
   AiOutlineClose,
 } from "react-icons/ai";
+
+const navigations = [
+  {
+    name: "Home",
+    url: "/",
+    icon: <AiOutlineHome fontSize={20} />,
+  },
+  {
+    name: "About",
+    url: "/about",
+    icon: <AiOutlineUser fontSize={20} />,
+  },
+  {
+    name: "Experience",
+    url: "/experience",
+    icon: <AiOutlineFileText fontSize={20} />,
+  },
+  {
+    name: "",
+    url: "https://github.com/niaziiii",
+    icon: <AiOutlineGithub fontSize={25} />,
+  },
+];
 
 const NavigationBar = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -33,135 +54,61 @@ const NavigationBar = () => {
   };
 
   return (
-    <div className="z-10 text-white sticky top-0 left-0 py-4 w-full backdrop-blur-md opacity-90">
-      {scrollPosition > 100 && (
-        <div className="w-full absolute transition top-0 left-0 p-4 h-full navbarContainer"></div>
-      )}
-      <div className=" w-11/12 py-2  m-auto flex items-center justify-between md:w-full md:px-4 lg:px-0 lg:w-4/5 relative">
-        <div>
+    <>
+      <div className="z-10 text-white sticky top-0 left-0 py-4 w-full backdrop-blur-md opacity-90 overflow-hidden">
+        <div className="w-11/12 py-2  m-auto flex items-center justify-between lg:w-4/5 ">
+          {/* logo */}
           <Link href="/">
             <b className=" text-3xl truncate">NiaziOnTop</b>
           </Link>
-        </div>
-        <button className=" block md:hidden">
-          <AiOutlineAlignRight onClick={openNavBar} fontSize={30} />
-        </button>
-        <ul className="hidden gap-4 lg:gap-8 md:flex items-center relative">
-          <li className="delay-200 ease-in-out ">
-            <Link className="flex gap-y-px items-center" href="/">
-              <AiOutlineHome fontSize={20} />
-              <p className="pl-1 text-xl">Home</p>
-            </Link>
-          </li>
-          <li className="delay-200 ease-in-out ">
-            <Link className="flex gap-y-px items-center" href="/about">
-              <AiOutlineUser fontSize={20} />
-              <p className="pl-1 text-xl">About</p>
-            </Link>
-          </li>
-          <li className="delay-200 ease-in-out ">
-            <Link className="flex gap-y-px items-center" href="/experience">
-              <AiOutlineFileText fontSize={20} />
-              <p className="pl-1 text-xl">Experience</p>
-            </Link>
-          </li>
-          <li className="delay-200 ease-in-out ">
-            <Link className="flex gap-y-px items-center" href="/resume">
-              <AiOutlineFundProjectionScreen fontSize={20} />
-              <p className="pl-1 text-xl">Resume</p>
-            </Link>
-          </li>
-          <li>
-            <a
-              className="flex gap-y-px items-center w-full bg-btn  px-5 py-1 rounded-lg"
-              href="https://github.com/niaziiii"
-            >
-              <AiOutlineGithub fontSize={25} />
-              <p className="pl-1 text-xl">
-                <AiOutlineStar />
-              </p>
-            </a>
-          </li>
-        </ul>
 
-        <div
-          style={{ transform: "translateX(100%)" }}
-          className=" fixed right-0 top-0 bg-main  min-h-screen flex items-center flex-col justify-center w-72  md:hidden duration-300"
-          ref={ref}
-        >
-          <div
-            className="rounded overflow-hidden absolute top-4 left-2 cursor-pointer text-white"
-            onClick={closeNavBar}
-          >
-            <AiOutlineClose
-              style={{
-                color: "white !important",
-                background: "#525a6a",
-                padding: "4px",
-              }}
-              fontSize={30}
-            />
+          {/* desktop */}
+          <div className="lists-desktop hidden  md:flex items-center gap-10 ml-auto">
+            {navigations.map((navigation, i) => (
+              <Link
+                href={`${navigation.url}`}
+                key={i}
+                className="flex items-center gap-1 font-bold"
+              >
+                {navigation.icon}
+                {navigation.name}
+              </Link>
+            ))}
           </div>
 
-          <h2 className="w-full text-center p-2 text-3xl opacity-100 ">
-            Portfolio
-          </h2>
-          <ul className="items-center p-5 relative w-full">
-            <li className="mb-8 py-2 text-center px-6 bg-btn border-b rounded opacity-100">
-              <Link
-                onClick={closeNavBar}
-                className="flex gap-y-px justify-center items-center "
-                href="/"
-              >
-                <AiOutlineHome fontSize={20} />
-                <p className="pl-1 text-xl">Home</p>
-              </Link>
-            </li>
-            <li className="mb-8 py-2 px-6 bg-btn border-b rounded opacity-100">
-              <Link
-                onClick={closeNavBar}
-                className="flex gap-y-px justify-center items-center"
-                href="/about"
-              >
-                <AiOutlineUser fontSize={20} />
-                <p className="pl-1 text-xl">About</p>
-              </Link>
-            </li>
-            <li className="mb-8 py-2 px-6 bg-btn border-b rounded opacity-100">
-              <Link
-                onClick={closeNavBar}
-                className="flex gap-y-px justify-center items-center"
-                href="/experience"
-              >
-                <AiOutlineFileText fontSize={20} />
-                <p className="pl-1 text-xl">Experience</p>
-              </Link>
-            </li>
-            <li className="mb-8 py-2 px-6 bg-btn border-b rounded opacity-100">
-              <Link
-                onClick={closeNavBar}
-                className="flex gap-y-px justify-center items-center"
-                href="/resume"
-              >
-                <AiOutlineFundProjectionScreen fontSize={20} />
-                <p className="pl-1 text-xl">Resume</p>
-              </Link>
-            </li>
-            <li>
-              <a
-                className="flex gap-y-px items-center justify-center w-full bg-black px-5 py-1 rounded-lg"
-                href="https://github.com/niaziiii"
-              >
-                <AiOutlineGithub fontSize={25} />
-                <p className="pl-1 text-xl">
-                  <AiOutlineStar />
-                </p>
-              </a>
-            </li>
-          </ul>
+          {/* hamburger */}
+          <button className=" block md:hidden">
+            <AiOutlineAlignRight onClick={openNavBar} fontSize={30} />
+          </button>
         </div>
       </div>
-    </div>
+
+      {/* mobile */}
+      <div
+        className=" bg-secondary text-white transition-all flex flex-col justify-center p-6 gap-10 z-50 h-[100vh] fixed top-0 right-0 w-[15rem]"
+        ref={ref}
+        style={{ transform: "translateX(100%)" }}
+      >
+        <button className="absolute top-2 left-2" onClick={closeNavBar}>
+          <AiOutlineClose fontSize={25} />
+        </button>
+
+        <Link href="/" onClick={closeNavBar} className="-mt-20">
+          <b className=" text-3xl truncate">NiaziOnTop</b>
+        </Link>
+        {navigations.map((navigation, i) => (
+          <Link
+            href={`${navigation.url}`}
+            key={i}
+            onClick={closeNavBar}
+            className="flex items-center justify-center gap-1 rounded-lg font-bold bg-main p-2 px-6 w-full hover:bg-main/75"
+          >
+            {navigation.icon}
+            {navigation.name}
+          </Link>
+        ))}
+      </div>
+    </>
   );
 };
 
