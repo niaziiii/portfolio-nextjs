@@ -20,10 +20,6 @@ export default function RootLayout({
       <Head>
         <meta property="og:title" content={metadata.title} />
         <meta property="og:description" content={metadata.description} />
-        <meta
-          property="og:image"
-          content="https://avatars.githubusercontent.com/u/79576625?v=4"
-        />
       </Head>
       <div
         style={{
