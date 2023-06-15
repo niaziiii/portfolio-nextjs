@@ -9,6 +9,7 @@ import {
   AiOutlineGithub,
   AiOutlineAlignRight,
   AiOutlineClose,
+  AiOutlineContacts,
 } from "react-icons/ai";
 
 const navigations = [
@@ -26,6 +27,11 @@ const navigations = [
     name: "Experience",
     url: "/experience",
     icon: <AiOutlineFileText fontSize={20} />,
+  },
+  {
+    name: "Contact Us",
+    url: "/contact",
+    icon: <AiOutlineContacts fontSize={20} />,
   },
   {
     name: "",
