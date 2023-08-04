@@ -20,7 +20,7 @@ export const experienceSteps = [
     ],
   },
   {
-    label: "Smart Design and Engineering Solutions SEDS",
+    label: "Smart Engineering Design Solutions (SEDS)",
     date: "1 July 2023 - up to present",
     description: `In my current role, I engage in a dual responsibility scenario.
       Primarily, I contribute to the development of dynamic web-based games using JavaScript,
