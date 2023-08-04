@@ -1,7 +1,7 @@
 export const experienceSteps = [
   {
-    label: "PSEB Internship",
-    date: "1st Feb 2023 - 15 Jun 2023",
+    label: "Pixako Technology Pvt, PSEB Internship",
+    date: "1st Feb 2023 - 29 Jun 2023",
     description: `During internship, I gained hands-on experience with Next.js and GraphQL development. 
     Notably, I worked on a project CRUD Operation App,
     focusing on enterprise-level large data. Using MongoDB for efficient data storage and ag-Grid for advanced 
@@ -20,15 +20,16 @@ export const experienceSteps = [
     ],
   },
   {
-    label: "Static Sites Building",
-    date: "10th May 2022 - up to present",
-    description: `I had the remote opportunity to contribute to TryHackMe's platform by designing and developing 
-    their static site for cybersecurity courses. Leveraging my expertise in HTML, CSS, and JavaScript, 
-    I collaborated closely with theTryHackMe team to create an engaging and user-friendly learning environment`,
-    images: [
-      "/experience-images/tryhackme/round-1.png",
-      "/experience-images/tryhackme/round-2.png",
-      "/experience-images/tryhackme/screen-1.png",
-    ],
+    label: "Smart Design and Engineering Solutions SEDS",
+    date: "1 July 2023 - up to present",
+    description: `In my current role, I engage in a dual responsibility scenario.
+      Primarily, I contribute to the development of dynamic web-based games using JavaScript,
+      which involves creating intricate interactive features that enhance user engagement
+      and enjoyment.
+      In parallel, I am an integral part of a React.js and Node.js project centered around
+      building a sophisticated Customer Relationship Management (CRM) system. My tasks 
+      encompass ensuring
+      a seamless and intuitive user interface design while also optimizing the system's backend 
+      functionality for efficient data management.`,
   },
 ];
