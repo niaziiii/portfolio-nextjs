@@ -1,6 +1,5 @@
 import React from "react";
 import { VerticalLinearStepper } from "@/components";
-import { motion } from "framer-motion"; // Assuming you have framer-motion installed
 
 const Experience = () => {
   return (
