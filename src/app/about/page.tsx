@@ -7,33 +7,65 @@ import tools from "../../assets/data/toolData";
 
 export default function About() {
   return (
-    <div className="text-white">
+    <div className="text-white max-w-6xl mx-auto px-4">
       <AboutMeIntroduction />
 
-      <div className="flex justify-center flex-col">
-        <h2 className="flex items-center gap-2 justify-center mb-8 text-3xl">
-          <b className="text-main">Professional </b> Skillset
-        </h2>
+      <div className="my-24">
+        <div className="flex items-center justify-center mb-8">
+          <div className="h-px w-12 bg-main mr-4"></div>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            <span className="text-main">Professional</span> Skillset
+          </h2>
+          <div className="h-px w-12 bg-main ml-4"></div>
+        </div>
         <Specialties data={skills} />
       </div>
 
-      <div className="flex justify-center flex-col mt-36">
-        <h2 className="flex items-center gap-2 justify-center mb-8 text-3xl">
-          <b className="text-main">Tools </b> Using
-        </h2>
+      <div className="my-24">
+        <div className="flex items-center justify-center mb-8">
+          <div className="h-px w-12 bg-main mr-4"></div>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            <span className="text-main">Tools</span> I Use
+          </h2>
+          <div className="h-px w-12 bg-main ml-4"></div>
+        </div>
         <Specialties data={tools} />
       </div>
 
-      <div className="flex justify-center flex-col mb-20">
-        <h2 className="flex items-center gap-2 justify-center mb-4 text-3xl mt-36">
-          Open-Source <b className="text-main">Development</b>
-        </h2>
-        <div className=" m-auto">
-          <GitHubCalendar
-            username="niaziiii"
-            color="#00ff0a"
-            year={new Date().getFullYear()}
-          />
+      <div className="my-24 mb-32">
+        <div className="flex items-center justify-center mb-12">
+          <div className="h-px w-12 bg-main mr-4"></div>
+          <h2 className="text-3xl md:text-4xl font-bold">
+            <span>Open-Source</span>{" "}
+            <span className="text-main">Contributions</span>
+          </h2>
+          <div className="h-px w-12 bg-main ml-4"></div>
+        </div>
+
+        <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
+          <p className="text-center text-gray-300 mb-6">
+            My GitHub contributions over the past year
+          </p>
+          <div className="flex justify-center overflow-x-auto pb-4">
+            <GitHubCalendar
+              username="niaziiii"
+              color="#00ff0a"
+              year={new Date().getFullYear()}
+              fontSize={14}
+              hideColorLegend
+              style={{ maxWidth: "100%" }}
+            />
+          </div>
+          <div className="flex justify-center mt-6">
+            <a
+              href="https://github.com/niaziiii"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-6 py-2 bg-gray-700 hover:bg-main transition-colors duration-300 rounded-md text-white"
+            >
+              View My GitHub Profile
+            </a>
+          </div>
         </div>
       </div>
     </div>

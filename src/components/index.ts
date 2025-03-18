@@ -8,7 +8,6 @@ import AboutMeIntroduction from "./AboutMe/AboutMe";
 import Specialties from "./Specialties/Specialties";
 import VerticalLinearStepper from "./Stepper/Stepper";
 import Contact from "./Contact/contact";
-import SvgContact from "./Contact/svg";
 
 export {
   // layout components
@@ -30,5 +29,4 @@ export {
 
   // contact page components
   Contact,
-  SvgContact,
 };
