@@ -11,6 +11,7 @@ module.exports = {
         backgroundMain: "rgba(60, 24, 95, 0.3490196078) !important",
         main: "#212c42",
         "main-2": "#212c4285",
+        "main-3": "rgb(17 95 221)",
         secondary: "#151c2b",
         btn: "#525a6a",
       },

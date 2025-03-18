@@ -7,6 +7,7 @@ import FindMe from "./Findme/Findme";
 import AboutMeIntroduction from "./AboutMe/AboutMe";
 import Specialties from "./Specialties/Specialties";
 import VerticalLinearStepper from "./Stepper/Stepper";
+import Contact from "./Contact/contact";
 
 export {
   // layout components
@@ -25,4 +26,7 @@ export {
 
   // experince page components
   VerticalLinearStepper,
+
+  // contact page components
+  Contact,
 };
