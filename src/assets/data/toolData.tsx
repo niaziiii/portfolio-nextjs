@@ -1,19 +1,20 @@
 import {
-  SiVisualstudio,
+  SiNetlify,
   SiHeroku,
   SiMongodb,
-  SiNetlify,
-  SiVercel,
+  // SiNetlify,
   SiPostman,
 } from "react-icons/si";
 
 import { AiFillGithub, AiFillCompass } from "react-icons/ai";
 import { FaBitbucket } from "react-icons/fa";
+import { DiVisualstudio } from "react-icons/di";
+import { RiVercelLine } from "react-icons/ri";
 
 const tools = [
   {
     name: "Visual Studio",
-    icon: <SiVisualstudio />,
+    icon: <DiVisualstudio />,
     background: "#3a94cd",
   },
   {
@@ -34,8 +35,8 @@ const tools = [
   },
   {
     name: "Vercel",
-    icon: <SiVercel />,
-    background: "black",
+    icon: <RiVercelLine />,
+    background: "#a3a3a3",
   },
   {
     name: "Netlify",
@@ -45,7 +46,7 @@ const tools = [
   {
     name: "Github",
     icon: <AiFillGithub />,
-    background: "#000",
+    background: "#a3a3a3",
   },
   {
     name: "Bitbucket",
