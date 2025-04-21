@@ -29,7 +29,7 @@ body {
   color: rgb(17 95 221);
 }
 .bg-primary {
-  color: rgb(17 95 221);
+  background: rgb(17 95 221);
 }
 .border-primary {
   border-color: rgb(17 95 221);
