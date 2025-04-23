@@ -1,6 +1,6 @@
-import FindMe from "@/pages/home/FindMe";
-import HeroSection from "@/pages/home/HeroSection";
-import MySelf from "@/pages/home/MySelf";
+import FindMe from "@/components/home/FindMe";
+import HeroSection from "@/components/home/HeroSection";
+import MySelf from "@/components/home/MySelf";
 
 export default function Home() {
   return (

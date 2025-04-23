@@ -1,4 +1,4 @@
-import Experience from "@/pages/experience/Experience";
+import Experience from "@/components/experience/Experience";
 import React from "react";
 
 export default function Page() {

@@ -3,8 +3,8 @@ import React from "react";
 import GitHubCalendar from "react-github-calendar";
 import skills from "@/assets/data/skillsData";
 import tools from "@/assets/data/toolData";
-import AboutMeIntroduction from "@/pages/about/AboutMeIntroduction";
-import Specialties from "@/pages/about/Specialties";
+import AboutMeIntroduction from "@/components/about/AboutMeIntroduction";
+import Specialties from "@/components/about/Specialties";
 
 export default function Page() {
   return (

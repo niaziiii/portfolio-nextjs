@@ -2,8 +2,8 @@
 import React, { useState, useEffect } from "react";
 import { experienceData } from "@/assets/data/experience";
 
-import ProjectCard from "@/pages/experience/ProjectCard";
-import AnimatedTimeline from "@/pages/experience/AnimatedTimeline";
+import ProjectCard from "@/components/experience/ProjectCard";
+import AnimatedTimeline from "@/components/experience/AnimatedTimeline";
 
 const Experience = () => {
   const [activeExperience, setActiveExperience] = useState(0);
@@ -119,7 +119,7 @@ const Experience = () => {
                   (project, index) => (
                     <div
                       key={index}
-                      className="transition-all duration-500 transform hover:translate-y-[-4px]"
+                      // className="transition-all duration-500 transform hover:translate-y-[-4px]"
                     >
                       <ProjectCard project={project} />
                     </div>
