@@ -40,10 +40,10 @@ const navigations = [
   },
 ];
 
-const NavigationBar = () => {
+const Header = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isOpen, setisOpen] = useState(false);
-  const ref: any = useRef();
+  const ref: any = useRef(null);
 
   useEffect(() => {
     window.onscroll = () => setScrollPosition(window.scrollY);
@@ -118,4 +118,4 @@ const NavigationBar = () => {
   );
 };
 
-export default NavigationBar;
+export default Header;

@@ -69,7 +69,7 @@ const skills = [
   {
     name: "NextJs",
     icon: <SiNextdotjs />,
-    background: "#000",
+    background: "#a3a3a3",
   },
   {
     name: "Redux",

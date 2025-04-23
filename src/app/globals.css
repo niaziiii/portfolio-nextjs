@@ -1,90 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-.skills {
-  position: relative;
-}
-.skills:hover p {
-  display: block;
-}
-.skills p {
-  border-top-right-radius: 8px;
-  position: absolute;
-  display: none;
-  top: 0%;
-  right: 0%;
-  padding: 0 0.5rem;
-}
-.css-1hv8oq8-MuiStepLabel-label.Mui-active,
-.css-1hv8oq8-MuiStepLabel-label,
-.css-1anx036,
-.css-1bbewu1 {
-  color: white !important;
-}
-.project-box-shadow {
-  background-color: rgba(60, 24, 95, 0.3490196078);
-  box-shadow: 0px 0px 5px 1px #7b29ce;
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
-.pdf-section {
-  width: 100% !important;
-  height: auto !important;
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
 }
 
-.text-main,
-.css-4ff9q7.Mui-completed,
-.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-active,
-.css-1u4zpwo-MuiSvgIcon-root-MuiStepIcon-root.Mui-completed {
-  color: rgb(17 95 221) !important;
-
-  font-weight: 700;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.text-primary {
+  color: rgb(17 95 221);
+}
+.bg-primary {
+  background: rgb(17 95 221);
+}
+.border-primary {
+  border-color: rgb(17 95 221);
+}
 .custom-shadow {
   transition: 0.2s linear;
 }
 .custom-shadow:hover {
   box-shadow: 0 0 2px 5px rgb(17 95 221);
 }
-
-.experience-images {
-  width: 175px;
-  height: 150px;
-  object-fit: fill;
-}
-.typing {
-  position: relative;
-}
-.typing::after {
-  content: "|";
-  position: absolute;
-  right: 0;
-  width: 100%;
-  color: red;
-  background: black;
-  -webkit-animation: typing 2s steps(22) forwards, caret 1s infinite;
-  animation: typing 2s steps(22) forwards, caret 1s infinite;
-}
-
-@-webkit-keyframes typing {
-  to {
-    width: 0;
-  }
-}
-
-@keyframes typing {
-  to {
-    width: 0;
-  }
-}
-@-webkit-keyframes caret {
-  50% {
-    color: transparent;
-  }
-}
-@keyframes caret {
-  50% {
-    color: transparent;
-  }
-} /*# sourceMappingURL=index.css.map */

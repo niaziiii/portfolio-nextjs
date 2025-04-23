@@ -1,13 +1,13 @@
-"use client";
-import React from "react";
+import FindMe from "@/components/home/FindMe";
+import HeroSection from "@/components/home/HeroSection";
+import MySelf from "@/components/home/MySelf";
 
-import { HeroSection, MySelf, FindMe } from "@/components";
 export default function Home() {
   return (
-    <>
+    <div className="">
       <HeroSection />
       <MySelf />
       <FindMe />
-    </>
+    </div>
   );
 }
