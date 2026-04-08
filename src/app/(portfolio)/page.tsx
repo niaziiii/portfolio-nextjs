@@ -4,7 +4,7 @@ import MySelf from "@/components/home/MySelf";
 
 export default function Home() {
   return (
-    <div className="">
+    <div>
       <HeroSection />
       <MySelf />
       <FindMe />

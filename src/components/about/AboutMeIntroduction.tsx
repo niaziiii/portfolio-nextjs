@@ -1,8 +1,11 @@
+"use client";
 import React from "react";
 import { GiCook, GiHiking, GiBookCover } from "react-icons/gi";
 import { FaMapMarkerAlt, FaRegClock } from "react-icons/fa";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import hobbyAnimation from "@/assets/animations/hobby__animation.json";
+
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 const AboutMeIntroduction = () => {
   return (

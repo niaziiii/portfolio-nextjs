@@ -1,6 +1,5 @@
 import { AiOutlineHtml5 } from "react-icons/ai";
 import {
-  SiMaterialdesign,
   SiTailwindcss,
   SiExpress,
   SiRedux,
@@ -8,16 +7,15 @@ import {
   SiNextdotjs,
   SiApollographql,
   SiTypescript,
+  SiSupabase,
+  SiGraphql,
 } from "react-icons/si";
 import {
   DiCss3Full,
   DiJavascript1,
-  DiBootstrap,
-  DiSass,
   DiReact,
   DiNodejsSmall,
 } from "react-icons/di";
-
 import { TbSql } from "react-icons/tb";
 
 const skills = [
@@ -32,27 +30,7 @@ const skills = [
     background: "#214ce5",
   },
   {
-    name: "Bootstrap",
-    icon: <DiBootstrap />,
-    background: "#8512f3",
-  },
-  {
-    name: "SASS",
-    icon: <DiSass />,
-    background: "#c76395",
-  },
-  {
-    name: "Material-ui",
-    icon: <SiMaterialdesign />,
-    background: "#00aaf7",
-  },
-  {
-    name: "Tawilwind",
-    icon: <SiTailwindcss />,
-    background: "#36b7f0",
-  },
-  {
-    name: "Javascript",
+    name: "JavaScript",
     icon: <DiJavascript1 />,
     background: "#e8d44d",
   },
@@ -62,12 +40,12 @@ const skills = [
     background: "#2f74c0",
   },
   {
-    name: "ReactJs",
+    name: "React",
     icon: <DiReact />,
     background: "#00d1f7",
   },
   {
-    name: "NextJs",
+    name: "Next.js",
     icon: <SiNextdotjs />,
     background: "#a3a3a3",
   },
@@ -77,22 +55,27 @@ const skills = [
     background: "#7248b6",
   },
   {
-    name: "Node Js",
+    name: "Node.js",
     icon: <DiNodejsSmall />,
     background: "#72b158",
   },
   {
-    name: "Apollo Server",
-    icon: <SiApollographql />,
-    background: "#214ce5",
-  },
-  {
-    name: "ExpressJs",
+    name: "Express.js",
     icon: <SiExpress />,
     background: "#999999",
   },
   {
-    name: "MongoDb",
+    name: "GraphQL",
+    icon: <SiGraphql />,
+    background: "#e535ab",
+  },
+  {
+    name: "Apollo",
+    icon: <SiApollographql />,
+    background: "#214ce5",
+  },
+  {
+    name: "MongoDB",
     icon: <SiMongodb />,
     background: "#0fa54d",
   },
@@ -100,6 +83,16 @@ const skills = [
     name: "SQL",
     icon: <TbSql />,
     background: "#214ce5",
+  },
+  {
+    name: "Supabase",
+    icon: <SiSupabase />,
+    background: "#3ecf8e",
+  },
+  {
+    name: "Tailwind",
+    icon: <SiTailwindcss />,
+    background: "#36b7f0",
   },
 ];
 
