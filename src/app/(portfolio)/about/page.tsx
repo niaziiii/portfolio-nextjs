@@ -1,10 +1,16 @@
 "use client";
+export const dynamic = "force-dynamic";
 import React from "react";
-import GitHubCalendar from "react-github-calendar";
+import dynamicImport from "next/dynamic";
 import skills from "@/assets/data/skillsData";
 import tools from "@/assets/data/toolData";
 import AboutMeIntroduction from "@/components/about/AboutMeIntroduction";
 import Specialties from "@/components/about/Specialties";
+
+const GitHubCalendar = dynamicImport(() => import("react-github-calendar"), {
+  ssr: false,
+  loading: () => <div className="h-32 animate-pulse bg-gray-800 rounded" />,
+});
 
 export default function Page() {
   return (

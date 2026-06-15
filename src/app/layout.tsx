@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layouts/Header";
-import Footer from "@/components/layouts/Footer";
-// import bgImage from "@/assets/images/bg.jpg"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Muhabat Khan Software Developer",
+  title: "Muhabat Khan – MERN Stack Developer",
   description:
-    "Hello! I'm a passionate Next.js and React developer. This platform is a reflection of my journey in the world of web development, showcasing my skills, projects, and experiences",
+    "MERN Stack Developer with 3+ years of experience building scalable web applications. Proficient in React, Next.js, TypeScript, Node.js, and cloud deployment.",
   icons: {
     icon: ["/fav/favicon.ico"],
     apple: ["/fav/apple-touch-icon.png"],
@@ -40,9 +37,7 @@ export default function RootLayout({
           backgroundColor: "black",
         }}
       >
-        <Header />
-        <main className="   w-11/12 lg:w-4/5 m-auto">{children}</main>
-        <Footer />
+        {children}
       </body>
     </html>
   );

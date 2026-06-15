@@ -1,18 +1,33 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { experienceData } from "@/assets/data/experience";
+import type { DBProject } from "@/types/project";
 
 import ProjectCard from "@/components/experience/ProjectCard";
 import AnimatedTimeline from "@/components/experience/AnimatedTimeline";
 
-const Experience = () => {
+interface ExperienceProps {
+  dbProjects: DBProject[];
+}
+
+const Experience = ({ dbProjects }: ExperienceProps) => {
   const [activeExperience, setActiveExperience] = useState(0);
   const [isPageLoaded, setIsPageLoaded] = useState(false);
-  const [showImageModal, setShowImageModal] = useState(false);
 
   useEffect(() => {
     setIsPageLoaded(true);
   }, []);
+
+  const currentCompany = experienceData[activeExperience].companyName;
+  const companyProjects = dbProjects.filter(
+    (p) => p.company === currentCompany
+  );
+  const unassignedProjects =
+    activeExperience === 0
+      ? dbProjects.filter((p) => !p.company)
+      : [];
+
+  const allProjects = [...companyProjects, ...unassignedProjects];
 
   return (
     <div className="text-white max-w-6xl mx-auto px-4 py-12">
@@ -50,7 +65,7 @@ const Experience = () => {
               experiences={experienceData}
               activeIndex={activeExperience}
               setActiveIndex={setActiveExperience}
-              setShowImageModal={setShowImageModal}
+              setShowImageModal={() => {}}
             />
           </div>
         </div>
@@ -110,22 +125,28 @@ const Experience = () => {
                 </svg>
                 Key Projects
                 <span className="ml-2 bg-gray-800 text-gray-400 text-xs px-2 py-0.5 rounded-full">
-                  {experienceData[activeExperience].projects.length}
+                  {allProjects.length}
                 </span>
               </h3>
 
-              <div className="space-y-8">
-                {experienceData[activeExperience].projects.map(
-                  (project, index) => (
-                    <div
-                      key={index}
-                      // className="transition-all duration-500 transform hover:translate-y-[-4px]"
-                    >
-                      <ProjectCard project={project} />
-                    </div>
-                  )
-                )}
-              </div>
+              {allProjects.length === 0 ? (
+                <div className="text-center py-10 text-gray-500 border border-dashed border-gray-700 rounded-xl">
+                  <p>No projects added yet for this role.</p>
+                  <p className="text-sm mt-1">
+                    Add projects via the{" "}
+                    <a href="/admin" className="text-blue-400 hover:underline">
+                      admin dashboard
+                    </a>
+                    .
+                  </p>
+                </div>
+              ) : (
+                <div className="space-y-8">
+                  {allProjects.map((project) => (
+                    <ProjectCard key={project._id} project={project} />
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
@@ -146,7 +167,6 @@ const Experience = () => {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   strokeLinecap="round"
@@ -177,7 +197,6 @@ const Experience = () => {
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
               >
                 <path
                   strokeLinecap="round"

@@ -19,37 +19,43 @@ const MySelf = () => {
               <span className="text-primary font-semibold">
                 MERN Stack Developer
               </span>{" "}
-              with over{" "}
-              <span className="text-primary font-semibold">3 years</span> of
-              experience architecting and developing high-performance, scalable
-              web applications.
+              with{" "}
+              <span className="text-primary font-semibold">3+ years</span> of
+              professional experience building scalable web applications and
+              REST APIs.
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed">
-              My expertise includes{" "}
+              Proficient in{" "}
+              <span className="text-primary font-semibold">React</span>,{" "}
               <span className="text-primary font-semibold">Next.js</span>,{" "}
-              <span className="text-primary font-semibold">React</span>, and{" "}
-              <span className="text-primary font-semibold">Node.js</span>, with
-              a deep understanding of Redux architecture for efficient state
-              management.
+              <span className="text-primary font-semibold">TypeScript</span>,{" "}
+              <span className="text-primary font-semibold">Node.js</span>, and
+              cloud deployment with{" "}
+              <span className="text-primary font-semibold">AWS</span> &{" "}
+              <span className="text-primary font-semibold">Docker</span>.
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed">
-              I'm passionate about building innovative{" "}
+              Delivered measurable results including{" "}
               <span className="text-primary font-semibold">
-                Web Technologies and Products
+                faster database performance
               </span>{" "}
-              that deliver exceptional user experiences.
+              and{" "}
+              <span className="text-primary font-semibold">
+                95% user satisfaction
+              </span>{" "}
+              across multi-store and SaaS platforms.
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed">
-              When I'm not coding, you can find me exploring the latest
-              frameworks or contributing to open-source projects. Feel free to{" "}
+              Available for full-time roles with async-friendly teams. Feel
+              free to{" "}
               <a
-                href="https://twitter.com/MuhabatNiazi"
+                href="https://linkedin.com/in/niaziiii"
                 className="text-primary border-b border-primary hover:opacity-80 transition-opacity"
               >
-                connect with me on Twitter
+                connect with me on LinkedIn
               </a>
               .
             </p>
