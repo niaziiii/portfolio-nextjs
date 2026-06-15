@@ -11,12 +11,14 @@ import {
   AiOutlineContacts,
   AiOutlineClose,
   AiOutlineMenu,
+  AiOutlineProject,
 } from "react-icons/ai";
 
 const navigations = [
   { name: "Home",       url: "/",           icon: <AiOutlineHome fontSize={20} /> },
   { name: "About",      url: "/about",      icon: <AiOutlineUser fontSize={20} /> },
   { name: "Experience", url: "/experience", icon: <AiOutlineFileText fontSize={20} /> },
+  { name: "Projects",   url: "/projects",   icon: <AiOutlineProject fontSize={20} /> },
   { name: "Contact",    url: "/contact",    icon: <AiOutlineContacts fontSize={20} /> },
   { name: "GitHub",     url: "https://github.com/niaziiii", icon: <AiOutlineGithub fontSize={20} />, external: true },
 ];
