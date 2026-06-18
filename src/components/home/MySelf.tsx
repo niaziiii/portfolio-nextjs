@@ -53,7 +53,7 @@ const MySelf = () => {
               Available for full-time roles with async-friendly teams. Feel
               free to{" "}
               <a
-                href="https://linkedin.com/in/niaziiii"
+                href="https://www.linkedin.com/in/muhabat-khan-niazi-926854192/"
                 className="text-primary border-b border-primary hover:opacity-80 transition-opacity"
               >
                 connect with me on LinkedIn
