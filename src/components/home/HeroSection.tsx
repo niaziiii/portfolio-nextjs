@@ -35,7 +35,7 @@ const HeroSection = () => {
 
   return (
     <div className="flex flex-col items-center justify-around min-h-[80vh] m-auto md:flex-row text-white">
-      <div className="flex flex-col mt-8 md:mt-0">
+      <div className="flex flex-col mt-2 md:mt-0">
         <h2 className="text-xl font-extrabolde flex items-end mb-4 md:mb-7 md:text-2xl">
           Hi There!
           <i className="w-14">

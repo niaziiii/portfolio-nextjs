@@ -193,8 +193,6 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Push content up on mobile so bottom bar doesn't cover it */}
-      <div className="md:hidden h-16" />
     </>
   );
 };
