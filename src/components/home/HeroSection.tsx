@@ -13,8 +13,6 @@ const HeroSection = () => {
     "Next.js Developer",
     "React Developer",
     "Node.js Developer",
-    "TypeScript Developer",
-    "GraphQL Developer",
   ];
 
   const [count, setCount] = useState<{ count: number }>({ count: 0 });

@@ -15,12 +15,12 @@ import {
 } from "react-icons/ai";
 
 const navigations = [
-  { name: "Home",       url: "/",           icon: <AiOutlineHome fontSize={20} /> },
-  { name: "About",      url: "/about",      icon: <AiOutlineUser fontSize={20} /> },
+  { name: "Home", url: "/", icon: <AiOutlineHome fontSize={20} /> },
+  { name: "About", url: "/about", icon: <AiOutlineUser fontSize={20} /> },
   { name: "Experience", url: "/experience", icon: <AiOutlineFileText fontSize={20} /> },
-  { name: "Projects",   url: "/projects",   icon: <AiOutlineProject fontSize={20} /> },
-  { name: "Contact",    url: "/contact",    icon: <AiOutlineContacts fontSize={20} /> },
-  { name: "GitHub",     url: "https://github.com/niaziiii", icon: <AiOutlineGithub fontSize={20} />, external: true },
+  { name: "Projects", url: "/projects", icon: <AiOutlineProject fontSize={20} /> },
+  { name: "Contact", url: "/contact", icon: <AiOutlineContacts fontSize={20} /> },
+  { name: "GitHub", url: "https://github.com/niaziiii", icon: <AiOutlineGithub fontSize={20} />, external: true },
 ];
 
 // Bottom bar: show first 4 items + the burger "more" button
@@ -60,7 +60,7 @@ const Header = () => {
                   href={nav.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-1 font-bold hover:text-primary transition-colors"
+                  className="flex items-center gap-1 font-bold hover:opacity-65 hover:text-primary transition-colors"
                 >
                   {nav.icon}
                   {nav.name}
@@ -69,9 +69,8 @@ const Header = () => {
                 <Link
                   key={i}
                   href={nav.url}
-                  className={`flex items-center gap-1 font-bold transition-colors hover:text-primary ${
-                    pathname === nav.url ? "text-primary" : ""
-                  }`}
+                  className={`flex items-center gap-1 font-bold hover:opacity-65 transition-colors hover:text-primary ${pathname === nav.url ? "text-primary" : ""
+                    }`}
                 >
                   {nav.icon}
                   {nav.name}
@@ -90,9 +89,8 @@ const Header = () => {
             <Link
               key={i}
               href={nav.url}
-              className={`flex-1 flex flex-col items-center justify-center py-2.5 gap-1 text-[10px] font-medium transition-colors ${
-                active ? "text-primary" : "text-gray-400 hover:text-white"
-              }`}
+              className={`flex-1 flex flex-col items-center justify-center py-2.5 gap-1 text-[10px] font-medium transition-colors ${active ? "text-primary" : "text-gray-400 hover:text-white"
+                }`}
             >
               <span className={`text-xl ${active ? "text-primary" : ""}`}>{nav.icon}</span>
               <span>{nav.name}</span>
@@ -116,9 +114,8 @@ const Header = () => {
 
       {/* ── Full-screen overlay for mobile ── */}
       <div
-        className={`md:hidden fixed inset-0 z-50 flex flex-col transition-all duration-300 ${
-          overlayOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`md:hidden fixed inset-0 z-50 flex flex-col transition-all duration-300 ${overlayOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       >
         {/* Backdrop */}
         <div
@@ -128,9 +125,8 @@ const Header = () => {
 
         {/* Panel slides up from bottom */}
         <div
-          className={`relative mt-auto bg-secondary rounded-t-2xl p-6 pb-safe transition-transform duration-300 ${
-            overlayOpen ? "translate-y-0" : "translate-y-full"
-          }`}
+          className={`relative mt-auto bg-secondary rounded-t-2xl p-6 pb-safe transition-transform duration-300 ${overlayOpen ? "translate-y-0" : "translate-y-full"
+            }`}
         >
           {/* Handle bar */}
           <div className="w-10 h-1 rounded-full bg-white/20 mx-auto mb-6" />
@@ -153,11 +149,10 @@ const Header = () => {
               const active = !nav.external && pathname === nav.url;
               const inner = (
                 <span
-                  className={`flex items-center gap-3 p-4 rounded-xl font-semibold transition-colors w-full ${
-                    active
-                      ? "bg-primary/20 text-primary"
-                      : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white"
-                  }`}
+                  className={`flex items-center gap-3 p-4 rounded-xl font-semibold transition-colors w-full ${active
+                    ? "bg-primary/20 text-primary"
+                    : "bg-white/5 text-gray-300 hover:bg-white/10 hover:text-white"
+                    }`}
                 >
                   <span className="text-2xl">{nav.icon}</span>
                   <span>{nav.name}</span>
