@@ -2,7 +2,7 @@
 
 Personal portfolio of Muhabat Khan Niazi — Frontend / MERN Developer.
 
-**Live:** https://niaziontop.vercel.app
+**Live:** https://portfolio-nextjs-niaziiii.vercel.app
 
 ## Tech Stack
 

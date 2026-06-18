@@ -12,7 +12,7 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const siteUrl = "https://niaziontop.vercel.app";
+const siteUrl = "https://portfolio-nextjs-niaziiii.vercel.app";
 const siteTitle = "Muhabat Khan – MERN Stack Developer";
 const siteDescription =
   "MERN Stack Developer with 3+ years of experience building scalable web applications. Proficient in React, Next.js, TypeScript, Node.js, and cloud deployment.";
