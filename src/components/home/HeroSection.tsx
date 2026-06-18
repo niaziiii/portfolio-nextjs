@@ -72,7 +72,7 @@ const HeroSection = () => {
           </Link>
           <Link
             href="/contact"
-            className="rounded-lg border border-primary px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary hover:text-white"
+            className="rounded-lg border border-primary px-6 py-3 font-semibold text-primary transition-colors hover:bg-primary hover:!text-white"
           >
             Get in Touch
           </Link>
