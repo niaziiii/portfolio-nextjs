@@ -2,7 +2,7 @@ import React from "react";
 
 const MySelf = () => {
   return (
-    <div className="max-w-4xl mx-auto text-white mt-16 px-4">
+    <div className="max-w-4xl mx-auto text-white mt-8 md:mt-16 px-4">
       <div className="relative">
         <div className="absolute -left-8 top-0 w-2 h-40 bg-primary rounded-full opacity-70 hidden md:block"></div>
 
@@ -37,15 +37,16 @@ const MySelf = () => {
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed">
-              Delivered measurable results including{" "}
+              I take pride in writing clean, maintainable code and{" "}
               <span className="text-primary font-semibold">
-                faster database performance
+                optimizing application performance
               </span>{" "}
-              and{" "}
+              — from streamlining database queries to delivering reliable,
+              intuitive user experiences across{" "}
               <span className="text-primary font-semibold">
-                95% user satisfaction
-              </span>{" "}
-              across multi-store and SaaS platforms.
+                multi-store and SaaS platforms
+              </span>
+              .
             </p>
 
             <p className="text-lg md:text-xl leading-relaxed">

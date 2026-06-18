@@ -9,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <div className="py-4 text-white ">
+    <div className="pt-4 pb-10 text-white ">
       <div className="w-11/12 gap-3  m-auto flex flex-col  items-center justify-between md:grid md:grid-cols-3 md:w-full md:px-4 lg:px-0  lg:w-4/5 ">
         <h2 className=" truncate  flex items-center gap-2 text-lg md:mb-0">
           Developed using
@@ -18,7 +18,7 @@ const Footer = () => {
           </b>
         </h2>
         <h2 className="flex-1   text-center">
-          Copyright © 2022 <b className="text-main">NiaziOnTop</b>
+          Copyright © {new Date().getFullYear()} <b className="text-main">Muhabat Khan Niazi</b>
         </h2>
         <ul className="flex justify-end items-center gap-4">
           <li className=" rounded-full custom-shadow">

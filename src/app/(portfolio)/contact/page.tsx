@@ -156,7 +156,7 @@ const Page = () => {
                     <motion.a
                       whileHover={{ y: -5, backgroundColor: "#1DA1F2" }}
                       transition={{ type: "spring", stiffness: 400 }}
-                      href="https://twitter.com/niaziiii"
+                      href="https://twitter.com/MuhabatNiazi"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="bg-gray-800 hover:bg-gray-700 p-3 rounded-lg transition-colors"

@@ -5,19 +5,19 @@ Items identified during the codebase audit (2026-06). Grouped by priority. Check
 ## 🔴 High priority (functional bugs)
 
 - [ ] **Contact form does not send email.** `src/app/api/contact/route.ts` is a stub — it `console.log`s the request and returns `"Hello World"` with a `200`, so the form shows a fake success message. Wire it up using the already-installed `nodemailer` (or EmailJS / Formspree). Parse the JSON body and actually send/store the message.
-- [ ] **Tailwind theme tokens don't resolve.** Project runs Tailwind v4 (`@import "tailwindcss"` in `globals.css`), but `tailwind.config.js` is v3-style and is never loaded (no `@config` directive). Custom colors `main`, `secondary`, `btn` are dead classes, so `bg-main`/`text-main` (Contact, Footer) and `bg-secondary` (mobile nav background) likely render with no color. Migrate the theme into `globals.css` via `@theme`, or add `@config "../../tailwind.config.js";`. Verify the mobile nav background after fixing.
+- [x] **Tailwind theme tokens don't resolve.** ✅ Fixed — migrated `primary`/`secondary`/`main` into a `@theme` block in `src/app/globals.css`. Verified against built CSS: `.bg-secondary`/`.bg-secondary/95` (mobile nav) and `.text-main`/`.bg-main` (Contact) now generate real utilities. `main` was never defined even in the old config; it was set to the brand blue `rgb(17 95 221)` to match `primary`. (`btn`, `main-2`, `main-3` were unused — not migrated.)
 
 ## 🟠 Medium priority (responsive / UX)
 
-- [ ] **Mobile bottom nav overlaps content.** The fixed bottom tab bar (`src/components/layouts/Header.tsx:85`) has no clearance — `<main>` in `src/app/(portfolio)/layout.tsx:12` needs bottom padding (e.g. `pb-24 md:pb-0`) so the footer/page content isn't hidden behind it on mobile.
-- [ ] **Hero role text can clip on small screens.** Rotating `<h2>` uses `truncate` at `text-2xl` (`src/components/home/HeroSection.tsx:51`); "MERN Stack Developer" may get cut off at ~375px. Allow wrapping or reduce size on mobile.
-- [ ] **Broken scale utility.** `md:scale-130` in `src/components/home/HeroSection.tsx:58` is not a defined utility (no-op). Use a valid scale value or define one.
+- [x] **Mobile bottom nav overlaps content.** ✅ Fixed — added `pb-24 md:pb-0` to `<main>` in `src/app/(portfolio)/layout.tsx` so content clears the fixed bottom tab bar on mobile.
+- [x] **Hero role text can clip on small screens.** ✅ Fixed — removed `truncate` from the rotating `<h2>` in `src/components/home/HeroSection.tsx` so role titles wrap instead of clipping.
+- [x] **Broken scale utility.** ✅ Fixed — `md:scale-130` → `md:scale-125` (valid default) in `src/components/home/HeroSection.tsx`. Also replaced the other dead one-offs in that file: `leading-1/2` → `leading-[1.15]`, `min-w-2` → `min-w-[10rem]`.
 
 ## 🟡 Low priority (content / polish)
 
-- [ ] **Stale copyright year.** `src/components/layouts/Footer.tsx:21` says "Copyright © 2022". Update to current year (consider making it dynamic).
-- [ ] **Inconsistent Twitter handle.** `MuhabatNiazi` in `Footer.tsx:36` and `FindMe.tsx:27`, but `niaziiii` in `src/app/(portfolio)/contact/page.tsx:159`. Pick one.
-- [ ] **Verify background image path.** Root layout uses inline `url(../bg.jpg)` (`src/app/layout.tsx:37`) — confirm it resolves in production.
+- [x] **Stale copyright year.** ✅ Fixed — now dynamic: `Copyright © {new Date().getFullYear()}` in `src/components/layouts/Footer.tsx` (Footer is a server component, so this is safe).
+- [x] **Inconsistent Twitter handle.** ✅ Fixed — standardized the Contact page on `MuhabatNiazi` (matching Footer + FindMe). ⚠️ Verify `MuhabatNiazi` is the correct live handle; if it's actually `niaziiii`, flip all three.
+- [x] **Verify background image path.** ✅ Fixed — `bg.jpg` lives in `public/`, so the fragile relative `url(../bg.jpg)` was changed to absolute `url(/bg.jpg)` in `src/app/layout.tsx`.
 
 ## ℹ️ Notes (no action needed)
 

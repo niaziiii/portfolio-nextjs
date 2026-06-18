@@ -45,14 +45,14 @@ const Header = () => {
     <>
       {/* ── Top header (always visible) ── */}
       <header className="z-30 text-white sticky top-0 left-0 py-4 w-full backdrop-blur-md opacity-90">
-        <div className="w-11/12 py-2 m-auto flex items-center justify-between lg:w-4/5">
+        <div className="w-11/12 py-2 m-auto flex items-center justify-between xl:w-4/5">
           {/* Logo */}
           <Link href="/">
-            <b className="text-3xl truncate">NiaziOnTop</b>
+            <b className="text-xl md:text-3xl truncate">Muhabat Khan Niazi</b>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center gap-10 ml-auto">
+          <nav className="hidden md:flex items-center gap-2 lg:gap-5 2xl:gap-10 ml-auto">
             {navigations.map((nav, i) =>
               nav.external ? (
                 <a

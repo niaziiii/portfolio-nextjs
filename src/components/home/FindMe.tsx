@@ -8,7 +8,7 @@ import {
 
 const FindMe = () => {
   return (
-    <div className="text-white text-center mt-24 pb-12">
+    <div className="text-white text-center mt-12 pb-6 md:mt-24 md:pb-12">
       <h1 className=" text-2xl md:text-4xl mb-2 text-center">FIND ME ON</h1>
       <p className="text-base md:text-lg mb-6">
         Feel free to <b className="text-primary">connect</b> with me

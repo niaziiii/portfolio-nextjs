@@ -12,7 +12,7 @@ export const experienceData = [
     jobTitle: "Full Stack Developer",
     date: "July 2023 – June 2024",
     description:
-      "Developed a multi-store management system supporting multiple retail locations with real-time inventory tracking. Designed database architecture for 10,000+ user records across 10-15 interconnected subsystems. Achieved 95% user satisfaction through intuitive UI/UX design patterns.",
+      "Developed a multi-store management system supporting multiple retail locations with real-time inventory tracking. Designed database architecture for 10,000+ user records across 10-15 interconnected subsystems. Prioritized intuitive UI/UX design to deliver a reliable, user-friendly experience.",
     projects: [],
   },
   {

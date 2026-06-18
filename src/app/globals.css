@@ -12,6 +12,15 @@
   --font-mono: var(--font-geist-mono);
 }
 
+/* Brand color tokens. Tailwind v4 does not load tailwind.config.js (no @config),
+   so the theme is defined here. Enables bg-/text-/border- utilities and their
+   opacity modifiers (e.g. bg-primary/20, bg-secondary/95). */
+@theme {
+  --color-primary: rgb(17 95 221);
+  --color-secondary: #151c2b;
+  --color-main: rgb(17 95 221);
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
