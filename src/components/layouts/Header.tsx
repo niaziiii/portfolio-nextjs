@@ -48,7 +48,7 @@ const Header = () => {
         <div className="w-11/12 py-2 m-auto flex items-center justify-between xl:w-4/5">
           {/* Logo */}
           <Link href="/">
-            <b className="text-xl md:text-3xl truncate">Muhabat Khan Niazi</b>
+            <b className="text-xl md:text-3xl truncate">Muhabat Khan</b>
           </Link>
 
           {/* Desktop nav */}
