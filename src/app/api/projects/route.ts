@@ -3,6 +3,9 @@ import { connectDB } from "@/lib/mongodb";
 import { getAdminSession } from "@/lib/auth";
 import Project from "@/models/Project";
 
+// DB access happens per-request; never prerender at build time
+export const dynamic = "force-dynamic";
+
 // GET /api/projects - public, returns all projects (without image binary data)
 export async function GET() {
   await connectDB();

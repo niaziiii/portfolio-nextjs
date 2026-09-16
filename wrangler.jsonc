@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "portfolio-nextjs",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-09-01",
+  // nodejs_compat: required by the Next.js server runtime (Buffer, streams, etc.)
+  // global_fetch_strictly_public: lets the app fetch its own public URL
+  // (NEXT_PUBLIC_BASE_URL) instead of short-circuiting inside the Worker.
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

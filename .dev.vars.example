@@ -1,0 +1,8 @@
+# Copy to .dev.vars for `npm run cf:preview` (local Workers runtime).
+# .dev.vars is gitignored; the real values live in the Worker's
+# Settings -> Variables and Secrets in the Cloudflare dashboard.
+NEXTJS_ENV=development
+MONGODB_URI=
+ADMIN_PASSWORD=
+JWT_SECRET=
+NEXT_PUBLIC_BASE_URL=http://localhost:3000
