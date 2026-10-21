@@ -39,6 +39,10 @@ export type Project = {
   role: string;
   timeline: string;
   company?: string;
+  /** Product mark shown next to the name. */
+  logo?: string;
+  /** Employer logo, for work done at a company. */
+  companyLogo?: string;
   links: ProjectLink[];
   stack: string[];
   cover?: Shot;
@@ -63,6 +67,7 @@ export const projects: Project[] = [
   {
     slug: "onefeeokr",
     name: "OneFeeOKR",
+    logo: "/logos/onefeeokr.svg",
     tagline: "OKR software with one flat fee per company and unlimited users.",
     summary:
       "A multi-tenant OKR platform I designed, built and launched solo: weekly email check-ins, alignment maps, a coach console, nine integrations and billing enforced in the database.",
@@ -186,6 +191,8 @@ export const projects: Project[] = [
     slug: "stackly",
     name: "Stackly",
     company: "Infiniti Business Solutions",
+    logo: "/logos/stackly.png",
+    companyLogo: "/logos/infiniti.jpg",
     tagline: "An all-in-one platform for agencies: websites, funnels, CRM and client projects.",
     summary:
       "At Infiniti Business Solutions (US, remote) I build core modules of Stackly (Agency Eleva): a GrapesJS page and funnel builder with Magnus Intelligence AI generation, a template gallery, CRM reporting and the client workspace.",

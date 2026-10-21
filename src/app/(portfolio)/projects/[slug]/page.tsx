@@ -9,6 +9,7 @@ import Gallery from "@/components/projects/Gallery";
 import ProjectLinks from "@/components/projects/ProjectLinks";
 import CoverFallback from "@/components/projects/CoverFallback";
 import Reveal from "@/components/ui/Reveal";
+import Logo from "@/components/ui/Logo";
 import { BrowserFrame, Chip, Container, Eyebrow } from "@/components/ui/primitives";
 import { getProject, projects } from "@/data/projects";
 
@@ -52,10 +53,12 @@ export default async function ProjectPage({ params }: Params) {
   const next = projects[(index + 1) % projects.length];
   const host = project.links.find((l) => l.kind === "live" || l.kind === "private")?.href;
 
-  const meta = [
+  const meta: { label: string; value: string; logo?: string }[] = [
     { label: "Role", value: project.role },
     { label: "Timeline", value: project.timeline },
-    { label: project.company ? "Company" : "Type", value: project.company ?? "Independent product" },
+    project.company
+      ? { label: "Company", value: project.company, logo: project.companyLogo }
+      : { label: "Type", value: "Independent product" },
   ];
 
   return (
@@ -67,7 +70,17 @@ export default async function ProjectPage({ params }: Params) {
               <LuArrowLeft className="size-4" /> All work
             </Link>
             <p className="mt-8 font-mono text-xs text-faint">{project.context}</p>
-            <h1 className="mt-2 text-4xl font-semibold tracking-tight sm:text-6xl">{project.name}</h1>
+            <div className="mt-3 flex items-center gap-4">
+              {project.logo ? (
+                <Logo
+                  src={project.logo}
+                  alt={`${project.name} logo`}
+                  bare={project.logo.endsWith(".svg")}
+                  className="size-12 rounded-xl sm:size-16 sm:rounded-2xl"
+                />
+              ) : null}
+              <h1 className="text-4xl font-semibold tracking-tight sm:text-6xl">{project.name}</h1>
+            </div>
             <p className="mt-4 max-w-3xl text-xl text-muted text-pretty">{project.tagline}</p>
             <div className="mt-6">
               <ProjectLinks links={project.links} skipCase />
@@ -77,7 +90,10 @@ export default async function ProjectPage({ params }: Params) {
               {meta.map((m) => (
                 <div key={m.label}>
                   <dt className="font-mono text-[11px] uppercase tracking-[0.18em] text-faint">{m.label}</dt>
-                  <dd className="mt-1.5 text-sm">{m.value}</dd>
+                  <dd className="mt-1.5 flex items-center gap-2 text-sm">
+                    {m.logo ? <Logo src={m.logo} alt="" className="size-6 rounded-md" /> : null}
+                    {m.value}
+                  </dd>
                 </div>
               ))}
             </dl>
@@ -210,14 +226,34 @@ export default async function ProjectPage({ params }: Params) {
             <Container>
               <Link
                 href={`/projects/${next.slug}`}
-                className="group flex items-center justify-between gap-6 rounded-2xl border border-line bg-surface/60 p-6 transition hover:border-line-strong sm:p-8"
+                className="group grid items-center gap-6 overflow-hidden rounded-2xl border border-line bg-surface/60 p-5 transition hover:border-line-strong sm:grid-cols-[1fr_minmax(0,22rem)] sm:p-8"
               >
                 <div>
                   <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-faint">Next case study</p>
-                  <p className="mt-2 text-2xl font-semibold tracking-tight">{next.name}</p>
-                  <p className="mt-1 text-muted">{next.tagline}</p>
+                  <div className="mt-3 flex items-center gap-3">
+                    {next.logo ? (
+                      <Logo src={next.logo} alt="" bare={next.logo.endsWith(".svg")} className="size-10 rounded-xl" />
+                    ) : null}
+                    <p className="text-2xl font-semibold tracking-tight">{next.name}</p>
+                  </div>
+                  <p className="mt-2 text-muted text-pretty">{next.tagline}</p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-ink group-hover:text-accent">
+                    Read the case study
+                    <LuArrowRight className="size-4 transition group-hover:translate-x-1" />
+                  </span>
                 </div>
-                <LuArrowRight className="size-6 shrink-0 text-faint transition group-hover:translate-x-1 group-hover:text-ink" />
+                {next.cover ? (
+                  <div className="overflow-hidden rounded-xl border border-line shadow-[0_18px_40px_-24px_rgb(0_0_0/0.6)]">
+                    <Image
+                      src={next.cover.src}
+                      alt={next.cover.alt}
+                      width={next.cover.width}
+                      height={next.cover.height}
+                      sizes="(min-width: 640px) 352px, 100vw"
+                      className="aspect-[16/10] w-full object-cover object-top transition duration-500 group-hover:scale-[1.03]"
+                    />
+                  </div>
+                ) : null}
               </Link>
             </Container>
           </section>

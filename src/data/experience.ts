@@ -1,6 +1,7 @@
 export type Role = {
   company: string;
   companyUrl?: string;
+  logo?: string;
   title: string;
   start: string;
   end: string;
@@ -15,6 +16,7 @@ export type Role = {
 export const experience: Role[] = [
   {
     company: "Infiniti Business Solutions",
+    logo: "/logos/infiniti.jpg",
     title: "Full Stack Developer",
     start: "Jun 2024",
     end: "Present",
@@ -34,6 +36,7 @@ export const experience: Role[] = [
   },
   {
     company: "Smart Engineering & Design Solutions",
+    logo: "/logos/smart-engineering.jpg",
     title: "Software Engineer",
     start: "Jul 2023",
     end: "Jun 2024",
@@ -51,6 +54,7 @@ export const experience: Role[] = [
   },
   {
     company: "Pixako Technologies (Pvt.) Ltd",
+    logo: "/logos/pixako.jpg",
     title: "Software Engineer Intern",
     start: "Feb 2023",
     end: "Jul 2023",
@@ -69,6 +73,7 @@ export const experience: Role[] = [
 
 export const education = {
   school: "University of Southern Punjab, Multan",
+  logo: "/logos/usp.jpg",
   degree: "BS in Computer Science",
   start: "Oct 2018",
   end: "Oct 2022",
@@ -76,7 +81,7 @@ export const education = {
 };
 
 export const certifications = [
-  { name: "MERN Stack Development", issuer: "Pakistan Software Export Board (PSEB)" },
+  { name: "MERN Stack Development", issuer: "Pakistan Software Export Board (PSEB)", logo: "/logos/pseb.jpg" },
 ];
 
 export const languages = [

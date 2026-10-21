@@ -3,6 +3,7 @@ import Link from "next/link";
 import { LuArrowRight, LuCheck } from "react-icons/lu";
 import type { Project } from "@/data/projects";
 import { BrowserFrame, Chip } from "@/components/ui/primitives";
+import Logo from "@/components/ui/Logo";
 import ProjectLinks from "./ProjectLinks";
 import CoverFallback from "./CoverFallback";
 
@@ -34,8 +35,16 @@ export default function FeaturedProject({ project, flip = false }: { project: Pr
       </Link>
 
       <div className={`md:col-span-5 ${flip ? "md:order-1" : ""}`}>
-        <p className="font-mono text-xs text-faint">{project.context}</p>
-        <h3 className="mt-2 text-2xl font-semibold tracking-tight sm:text-3xl">
+        <p className="flex items-center gap-2 font-mono text-xs text-faint">
+          {project.companyLogo ? (
+            <Logo src={project.companyLogo} alt={`${project.company} logo`} className="size-5 rounded-md" />
+          ) : null}
+          {project.context}
+        </p>
+        <h3 className="mt-3 flex items-center gap-3 text-2xl font-semibold tracking-tight sm:text-3xl">
+          {project.logo ? (
+            <Logo src={project.logo} alt="" bare={project.logo.endsWith(".svg")} className="size-9 rounded-lg" />
+          ) : null}
           <Link href={href} className="hover:text-accent">
             {project.name}
           </Link>
