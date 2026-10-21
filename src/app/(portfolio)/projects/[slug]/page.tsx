@@ -91,7 +91,7 @@ export default async function ProjectPage({ params }: Params) {
                 <div key={m.label}>
                   <dt className="font-mono text-[11px] uppercase tracking-[0.18em] text-faint">{m.label}</dt>
                   <dd className="mt-1.5 flex items-center gap-2 text-sm">
-                    {m.logo ? <Logo src={m.logo} alt="" className="size-6 rounded-md" /> : null}
+                    {m.logo ? <Logo src={m.logo} alt="" className="size-8 rounded-lg" /> : null}
                     {m.value}
                   </dd>
                 </div>

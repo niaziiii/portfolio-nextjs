@@ -16,18 +16,20 @@ export default function ExperienceList({ compact = false }: { compact?: boolean 
             key={`${role.company}-${role.start}`}
             className="group grid gap-4 rounded-2xl border border-transparent p-5 transition hover:border-line hover:bg-surface/60 sm:grid-cols-[10rem_1fr] sm:gap-8 sm:p-6"
           >
-            <div className="flex items-center gap-3 sm:flex-col sm:items-start sm:gap-4">
+            <div className="flex items-center gap-3 sm:sticky sm:top-24 sm:flex-col sm:items-start sm:gap-4 sm:self-start">
               {role.logo ? (
-                <Logo src={role.logo} alt={`${role.company} logo`} className="size-10 sm:order-2 sm:size-14" />
+                <Logo src={role.logo} alt={`${role.company} logo`} className="size-11 sm:order-2 sm:size-14" />
               ) : null}
-              <p className="font-mono text-xs uppercase tracking-wider text-faint sm:order-1 sm:pt-1">
-                {role.start} — {role.end}
+              <div className="sm:order-1 sm:pt-1">
+                <p className="font-mono text-xs uppercase tracking-wider text-faint">
+                  {role.start} — {role.end}
+                </p>
                 {role.end === "Present" ? (
-                  <span className="ml-2 inline-flex items-center rounded-full bg-success/15 px-1.5 py-0.5 text-[10px] font-semibold normal-case tracking-normal text-success">
+                  <span className="mt-1.5 inline-flex items-center rounded-full bg-success/15 px-2 py-0.5 text-[10px] font-semibold text-success">
                     Now
                   </span>
                 ) : null}
-              </p>
+              </div>
             </div>
             <div>
               <h3 className="text-lg font-semibold leading-snug">
