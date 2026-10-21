@@ -1,51 +1,118 @@
 @import "tailwindcss";
 
+/* Class-based dark mode: <html class="dark"> is set before paint by the inline
+   script in app/layout.tsx (stored choice, otherwise the OS preference). */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --canvas: #fafafa;
+  --surface: #ffffff;
+  --surface-2: #f4f4f5;
+  --ink: #09090b;
+  --muted: #52525b;
+  --faint: #71717a;
+  --line: #e4e4e7;
+  --line-strong: #d4d4d8;
+  --accent: #2563eb;
+  --accent-ink: #ffffff;
+  --accent-soft: #2563eb14;
+  --success: #16a34a;
+  --grid: #09090b0d;
+  --glow: #3b82f626;
+  color-scheme: light;
+}
+
+.dark {
+  --canvas: #09090b;
+  --surface: #111114;
+  --surface-2: #18181b;
+  --ink: #fafafa;
+  --muted: #a1a1aa;
+  --faint: #71717a;
+  --line: #27272a;
+  --line-strong: #3f3f46;
+  --accent: #60a5fa;
+  --accent-ink: #09090b;
+  --accent-soft: #60a5fa1f;
+  --success: #4ade80;
+  --grid: #ffffff0a;
+  --glow: #3b82f633;
+  color-scheme: dark;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-ink: var(--accent-ink);
+  --color-accent-soft: var(--accent-soft);
+  --color-success: var(--success);
 }
 
-/* Brand color tokens. Tailwind v4 does not load tailwind.config.js (no @config),
-   so the theme is defined here. Enables bg-/text-/border- utilities and their
-   opacity modifiers (e.g. bg-primary/20, bg-secondary/95). */
-@theme {
-  --color-primary: rgb(17 95 221);
-  --color-secondary: #151c2b;
-  --color-main: rgb(17 95 221);
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
-.text-primary {
-  color: rgb(17 95 221);
+::selection {
+  background: color-mix(in oklab, var(--accent) 28%, transparent);
 }
-.bg-primary {
-  background: rgb(17 95 221);
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 6px;
 }
-.border-primary {
-  border-color: rgb(17 95 221);
+
+/* Scroll reveal, driven by components/ui/Reveal.tsx. */
+[data-reveal] {
+  transition:
+    opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.custom-shadow {
-  transition: 0.2s linear;
+
+[data-reveal="pending"] {
+  opacity: 0;
+  transform: translateY(18px);
 }
-.custom-shadow:hover {
-  box-shadow: 0 0 2px 5px rgb(17 95 221);
+
+/* Faint grid that fades out from the top of the page. */
+.bg-grid {
+  background-image:
+    linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 70% 55% at 50% 0%, #000 35%, transparent 100%);
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+.text-pretty {
+  text-wrap: pretty;
 }
