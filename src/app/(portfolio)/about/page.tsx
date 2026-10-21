@@ -1,79 +1,120 @@
-"use client";
-export const dynamic = "force-dynamic";
-import React from "react";
-import dynamicImport from "next/dynamic";
-import skills from "@/assets/data/skillsData";
-import tools from "@/assets/data/toolData";
-import AboutMeIntroduction from "@/components/about/AboutMeIntroduction";
-import Specialties from "@/components/about/Specialties";
+import type { Metadata } from "next";
+import Image from "next/image";
+import { FaGithub } from "react-icons/fa6";
+import { LuArrowUpRight, LuBookOpen, LuChefHat, LuMountain } from "react-icons/lu";
+import GithubActivity from "@/components/about/GithubActivity";
+import SkillsGrid from "@/components/skills/SkillsGrid";
+import ContactCTA from "@/components/contact/ContactCTA";
+import { Container, Eyebrow, SectionHeading } from "@/components/ui/primitives";
+import { site } from "@/data/site";
 
-const GitHubCalendar = dynamicImport(() => import("react-github-calendar"), {
-  ssr: false,
-  loading: () => <div className="h-32 animate-pulse bg-gray-800 rounded" />,
-});
+export const metadata: Metadata = {
+  title: "About",
+  description: `About ${site.name}: a full-stack engineer from Multan, Pakistan who builds SaaS products end to end.`,
+  alternates: { canonical: "/about" },
+};
 
-export default function Page() {
+const hobbies = [
+  { icon: LuBookOpen, label: "Documentaries" },
+  { icon: LuChefHat, label: "Cooking" },
+  { icon: LuMountain, label: "Hiking" },
+];
+
+export default function AboutPage() {
   return (
-    <div className="text-white max-w-6xl mx-auto px-4">
-      <AboutMeIntroduction />
-
-      <div className="my-24">
-        <div className="flex items-center justify-center mb-8">
-          <div className="h-px w-12 bg-primary mr-4"></div>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="text-primary">Professional</span> Skillset
-          </h2>
-          <div className="h-px w-12 bg-primary ml-4"></div>
-        </div>
-        <Specialties data={skills} />
-      </div>
-
-      <div className="my-24">
-        <div className="flex items-center justify-center mb-8">
-          <div className="h-px w-12 bg-primary mr-4"></div>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="text-primary">Tools</span> I Use
-          </h2>
-          <div className="h-px w-12 bg-primary ml-4"></div>
-        </div>
-        <Specialties data={tools} />
-      </div>
-
-      <div className="my-24 mb-32">
-        <div className="flex items-center justify-center mb-12">
-          <div className="h-px w-12 bg-primary mr-4"></div>
-          <h2 className="text-3xl md:text-4xl font-bold">
-            <span>Open-Source</span>{" "}
-            <span className="text-primary">Contributions</span>
-          </h2>
-          <div className="h-px w-12 bg-primary ml-4"></div>
-        </div>
-
-        <div className="bg-gray-800/50 p-6 rounded-xl border border-gray-700">
-          <p className="text-center text-gray-300 mb-6">
-            My GitHub contributions over the past year
-          </p>
-          <div className="flex justify-center overflow-x-auto pb-4">
-            <GitHubCalendar
-              username="niaziiii"
-              year={new Date().getFullYear()}
-              fontSize={14}
-              hideColorLegend
-              style={{ maxWidth: "100%" }}
-            />
+    <>
+      <section className="pb-12 pt-16 md:pt-24">
+        <Container className="grid items-start gap-12 md:grid-cols-12">
+          <div className="md:col-span-8">
+            <Eyebrow>About</Eyebrow>
+            <h1 className="mt-3 text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+              Hi, I&apos;m Muhabat. I like owning a product from the first table to the last pixel.
+            </h1>
+            <div className="mt-8 space-y-5 text-lg leading-relaxed text-muted">
+              <p className="text-pretty">
+                I&apos;m a full-stack engineer from Multan, Pakistan with 3.5+ years of professional experience. I
+                started on frontend work, building component libraries and server-rendered pages with React and
+                Next.js, and grew into owning whole features: data models, APIs, background jobs and the interfaces on
+                top.
+              </p>
+              <p className="text-pretty">
+                Since 2024 I&apos;ve worked remotely for a US-based company on Stackly, an all-in-one platform for
+                agencies, where I build the GrapesJS page and funnel builder, its AI generation, CRM reporting and the
+                client workspace. In 2026 I designed and launched{" "}
+                <a href="/projects/onefeeokr" className="font-medium text-ink underline decoration-line-strong underline-offset-4 hover:decoration-accent">
+                  OneFeeOKR
+                </a>{" "}
+                on my own: a multi-tenant OKR platform on Next.js and Supabase with row-level security, database-enforced
+                billing, scheduled jobs and nine integrations.
+              </p>
+              <p className="text-pretty">
+                I care about software that is easy to change: typed boundaries, rules enforced where they can&apos;t be
+                bypassed, and interfaces that feel fast. I work well async, write things down, and I&apos;m comfortable
+                overlapping with European and US hours.
+              </p>
+            </div>
           </div>
-          <div className="flex justify-center mt-6">
-            <a
-              href="https://github.com/niaziiii"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-2 bg-gray-700 hover:bg-primary transition-colors duration-300 rounded-md text-white"
-            >
-              View My GitHub Profile
-            </a>
+          <div className="md:col-span-4">
+            <div className="overflow-hidden rounded-3xl border border-line bg-surface">
+              <Image src="/me.jpg" alt={site.name} width={320} height={320} className="aspect-square w-full object-cover" />
+              <div className="space-y-1 p-5 text-sm">
+                <p className="font-semibold">{site.name}</p>
+                <p className="text-muted">{site.role}</p>
+                <p className="text-faint">
+                  {site.location} · {site.timezone}
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
+        </Container>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <Container>
+          <SectionHeading eyebrow="Toolbox" title="Skills and tools" />
+          <SkillsGrid />
+        </Container>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <Container>
+          <SectionHeading
+            eyebrow="Open source"
+            title="GitHub activity"
+            action={
+              <a
+                href={site.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted hover:text-ink"
+              >
+                <FaGithub className="size-4" /> @{site.githubUser} <LuArrowUpRight className="size-4" />
+              </a>
+            }
+          />
+          <div className="rounded-2xl border border-line bg-surface/60 p-6">
+            <GithubActivity username={site.githubUser} />
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <Container>
+          <SectionHeading eyebrow="Away from the keyboard" title="Beyond code" />
+          <ul className="grid gap-4 sm:grid-cols-3">
+            {hobbies.map(({ icon: Icon, label }) => (
+              <li key={label} className="flex items-center gap-3 rounded-2xl border border-line bg-surface/60 p-5">
+                <span className="inline-flex size-10 items-center justify-center rounded-xl bg-accent-soft text-accent">
+                  <Icon className="size-5" aria-hidden />
+                </span>
+                <span className="font-medium">{label}</span>
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      <ContactCTA />
+    </>
   );
 }

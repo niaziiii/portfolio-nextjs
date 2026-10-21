@@ -1,51 +1,84 @@
-import ProjectsGrid from "@/components/projects/ProjectsGrid";
-import type { DBProject } from "@/types/project";
+import type { Metadata } from "next";
+import { FaGithub } from "react-icons/fa6";
+import { LuArrowUpRight, LuCode } from "react-icons/lu";
+import FeaturedProject from "@/components/projects/FeaturedProject";
+import ContactCTA from "@/components/contact/ContactCTA";
+import Reveal from "@/components/ui/Reveal";
+import { Container, Eyebrow } from "@/components/ui/primitives";
+import { projects } from "@/data/projects";
+import { site } from "@/data/site";
 
-async function getProjects(): Promise<DBProject[]> {
-  try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL ?? "http://localhost:3000";
-    const res = await fetch(`${baseUrl}/api/projects`, {
-      next: { revalidate: 60 },
-    });
-    if (!res.ok) return [];
-    return res.json();
-  } catch {
-    return [];
-  }
-}
+export const metadata: Metadata = {
+  title: "Work",
+  description:
+    "Case studies: OneFeeOKR, a multi-tenant OKR SaaS built solo, and Stackly, an agency platform with a GrapesJS page and funnel builder, AI generation and CRM reporting.",
+  alternates: { canonical: "/projects" },
+};
 
-export default async function ProjectsPage() {
-  const projects = await getProjects();
-
+export default function ProjectsPage() {
   return (
-    <div className="text-white max-w-6xl mx-auto px-4 py-12">
-      <div className="mb-10">
-        <div className="relative inline-block mb-4">
-          <h1 className="text-4xl md:text-5xl font-bold">
-            My <span className="text-primary">Projects</span>
+    <>
+      <section className="pb-8 pt-16 md:pt-24">
+        <Container>
+          <Eyebrow>Work</Eyebrow>
+          <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
+            Case studies from real products
           </h1>
-          <div className="absolute bottom-0 left-0 w-24 h-1 bg-primary" />
-        </div>
-        <p className="text-gray-300 text-lg max-w-2xl mt-4">
-          A collection of products and tools I&apos;ve built across different roles and
-          technologies.
-        </p>
-      </div>
-
-      {projects.length === 0 ? (
-        <div className="text-center py-20 text-gray-500 border border-dashed border-gray-700 rounded-xl">
-          <p className="text-lg">No projects yet.</p>
-          <p className="text-sm mt-1">
-            Add projects via the{" "}
-            <a href="/admin" className="text-blue-400 hover:underline">
-              admin dashboard
-            </a>
-            .
+          <p className="mt-5 max-w-2xl text-lg text-muted text-pretty">
+            What each product does, what I built, and the engineering decisions behind it, with real screenshots.
           </p>
-        </div>
-      ) : (
-        <ProjectsGrid projects={projects} />
-      )}
-    </div>
+        </Container>
+      </section>
+
+      <section className="py-12 md:py-16">
+        <Container>
+          <div className="space-y-20 md:space-y-28">
+            {projects.map((project, i) => (
+              <Reveal key={project.slug}>
+                <FeaturedProject project={project} flip={i % 2 === 1} />
+              </Reveal>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      <section className="py-12">
+        <Container>
+          <div className="grid gap-4 md:grid-cols-2">
+            <a
+              href={site.repo}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-2xl border border-line bg-surface/60 p-6 transition hover:border-line-strong"
+            >
+              <LuCode className="size-5 text-accent" aria-hidden />
+              <h2 className="mt-4 flex items-center gap-1.5 font-semibold">
+                This portfolio <LuArrowUpRight className="size-4 text-faint transition group-hover:text-ink" />
+              </h2>
+              <p className="mt-2 text-sm text-muted">
+                Next.js 16, React 19, Tailwind CSS v4 and TypeScript. Static, typed content, light and dark themes,
+                and structured data for search. The source is open.
+              </p>
+            </a>
+            <a
+              href={site.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group rounded-2xl border border-line bg-surface/60 p-6 transition hover:border-line-strong"
+            >
+              <FaGithub className="size-5 text-accent" aria-hidden />
+              <h2 className="mt-4 flex items-center gap-1.5 font-semibold">
+                More on GitHub <LuArrowUpRight className="size-4 text-faint transition group-hover:text-ink" />
+              </h2>
+              <p className="mt-2 text-sm text-muted">
+                Earlier side projects and experiments with React, Next.js, Redux and GraphQL.
+              </p>
+            </a>
+          </div>
+        </Container>
+      </section>
+
+      <ContactCTA />
+    </>
   );
 }
