@@ -43,14 +43,16 @@ export const experience: Role[] = [
     location: "Islamabad, Pakistan",
     type: "Full-time · On-site",
     summary:
-      "Built a multi-store retail management platform used to run inventory, sales and purchasing across store locations.",
+      "Built a multi-store retail management platform and maintained EmpowerCRM, a healthcare-staffing ATS/CRM, across inventory, sales and recruiter-facing modules.",
     highlights: [
-      "Built the platform end to end: React and Redux interface, Node.js/Express services and the relational schema behind both.",
+      "Built the retail platform end to end: React and Redux interface, Node.js/Express services and the relational schema behind both.",
       "Modelled 10–15 interconnected modules (inventory, sales, purchasing, suppliers, customers, accounts) for 10,000+ records with referential integrity across subsystems.",
       "Developed REST APIs for real-time inventory, stock transfers between stores and consolidated cross-location reporting.",
+      "Maintained and extended EmpowerCRM, a healthcare-staffing CRM: triaged and fixed reported issues and shipped feature requests across its Dashboard, Jobs, Sourcing and Tasks modules.",
       "Kept data-heavy dashboards responsive with normalized Redux state, memoized selectors and optimized queries, and standardized shared UI components across modules.",
     ],
     stack: ["React", "Redux", "Node.js", "Express", "SQL", "REST APIs"],
+    project: { label: "EmpowerCRM case study", href: "/projects/empower-crm" },
   },
   {
     company: "Pixako Technologies (Pvt.) Ltd",
