@@ -275,6 +275,152 @@ export const projects: Project[] = [
       { src: "/projects/stackly/crm-dashboard-tasks-tickets.webp", alt: "Task and ticket widgets", caption: "Task status by assignee and ticket backlog aging.", width: 1366, height: 641 },
     ],
   },
+  {
+    slug: "empower-crm",
+    name: "EmpowerCRM",
+    company: "Smart Engineering & Design Solutions",
+    tagline: "A healthcare-staffing ATS/CRM that recruiters run their day inside: jobs, sourcing and client hospital accounts.",
+    summary:
+      "At Smart Engineering & Design Solutions (SEDS) I kept EmpowerCRM (empower.associates) running and growing for healthcare-staffing recruiters: fixing reported issues, shipping feature requests, and extending the Dashboard, Jobs, Sourcing and Tasks modules of an existing React SPA.",
+    context: "Smart Engineering & Design Solutions · 2023 – 2024",
+    role: "Software Engineer: issue fixes, feature extensions and CRM maintenance",
+    timeline: "Jul 2023 – Jun 2024",
+    companyLogo: "/logos/smart-engineering.jpg",
+    links: [
+      { label: "Sandbox", href: "https://sandbox.crm.empower.associates/", kind: "private", note: "Tenant: Pcsandbox · login required" },
+    ],
+    stack: ["React", "REST APIs", "JavaScript", "Font Awesome"],
+    cover: { src: "/projects/empower-crm/dashboard.webp", alt: "EmpowerCRM dashboard with open jobs, today's tasks and a release-notes panel", caption: "Dashboard: open jobs, today's tasks and an in-app changelog for every release.", width: 800, height: 359 },
+    highlights: [
+      "Shipped fixes and feature requests across Dashboard, Jobs, Sourcing and Tasks, each release visible to recruiters in an in-app changelog",
+      "Maintained a single-bundle React SPA used daily by healthcare-staffing recruiters managing hundreds of candidate and hospital/medical-center records",
+      "Made targeted changes inside an existing, tightly coupled codebase without regressing the workflows recruiters already depended on",
+    ],
+    stats: [
+      { value: "7", label: "modules maintained" },
+      { value: "500+", label: "candidate records" },
+      { value: "1", label: "release changelog, every update" },
+    ],
+    problem: [
+      "EmpowerCRM is the tool healthcare-staffing recruiters work inside all day: posting jobs, sourcing candidates and tracking client hospital accounts. A bug or a slow-to-ship feature request blocks their pipeline directly.",
+      "My job wasn't to design the product; it was to keep it reliable and moving — fix what recruiters reported, build the features they asked for, and extend existing modules without breaking the flows the team already relied on.",
+    ],
+    built: [
+      {
+        icon: "zap",
+        title: "Issue fixes, fast",
+        body: "Triaged and fixed reported bugs across the Dashboard, People, Companies, Jobs, Sourcing and Tasks modules, shipped on a cadence recruiters could see for themselves.",
+      },
+      {
+        icon: "sparkles",
+        title: "Feature requests",
+        body: "Turned recruiter asks into shipped features — list-view responsiveness, job-posting changes and pagination improvements among them — logged in an in-app announcements panel each release.",
+      },
+      {
+        icon: "folder",
+        title: "Jobs & sourcing",
+        body: "Extended the Jobs pipeline (lead, open, closed, won) and the Sourcing search-task flow that feeds new candidates into it.",
+      },
+      {
+        icon: "users",
+        title: "People & companies",
+        body: "Worked on the People and Companies modules recruiters use to track candidates, hiring managers and client hospital/medical-center accounts.",
+      },
+      {
+        icon: "chart",
+        title: "Tasks & dashboard",
+        body: "Kept the task queue and dashboard (open jobs, today's tasks, release announcements) accurate as the underlying modules changed.",
+      },
+    ],
+    decisions: [
+      "Treated this as a maintenance engineering job: small, targeted changes over rewrites, since the app carried live recruiter traffic every day.",
+      "Shipped fixes and features behind an in-app changelog, so the team could see what changed each release without a separate release process.",
+    ],
+    gallery: [
+      { src: "/projects/empower-crm/dashboard.webp", alt: "EmpowerCRM dashboard", caption: "Dashboard: open jobs, today's tasks and an in-app changelog for every release.", width: 800, height: 359 },
+      { src: "/projects/empower-crm/jobs.webp", alt: "Jobs pipeline list", caption: "Jobs: lead, open, closed and won, with per-job application counts.", width: 800, height: 359 },
+      { src: "/projects/empower-crm/job-detail.webp", alt: "Job detail view", caption: "Job detail: description, requirements, placement details and contacts.", width: 800, height: 359 },
+      { src: "/projects/empower-crm/sourcing.webp", alt: "Sourcing search tasks", caption: "Sourcing: search tasks that feed new candidates into the pipeline.", width: 800, height: 359 },
+      { src: "/projects/empower-crm/tasks.webp", alt: "Tasks queue", caption: "Tasks: a shared queue with priority, status and owners.", width: 800, height: 359 },
+      { src: "/projects/empower-crm/campaigns.webp", alt: "Campaigns module", caption: "Campaigns: outreach by type, status and launch date.", width: 800, height: 359 },
+    ],
+  },
+  {
+    slug: "tryhackme-showcases",
+    name: "TryHackMe Showcases",
+    tagline: "11 interactive static sites turning cybersecurity concepts into click-through simulations.",
+    summary:
+      "Eleven standalone sites I designed and built to showcase TryHackMe room concepts as interactive simulations: a working x86 instruction emulator, a STRIDE/PASTA threat-modeling walkthrough, a SIEM-alert triage sim and more, deployed as static pages via GitHub Pages.",
+    context: "Personal project · 2024",
+    role: "Design and front-end engineering (solo)",
+    timeline: "2024",
+    links: [
+      { label: "Live hub", href: "https://niaziiii.github.io/static-sites-tryhackme/", kind: "live" },
+      { label: "Code", href: "https://github.com/niaziiii/static-sites-tryhackme", kind: "code" },
+    ],
+    stack: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
+    cover: { src: "/projects/tryhackme/assembly-emulator.webp", alt: "x86 Assembly Emulator with live registers, flags and stack", caption: "x86 Assembly Emulator: registers, flags and the stack update live as instructions run.", width: 800, height: 505 },
+    highlights: [
+      "A working x86 instruction emulator where registers, flags and the stack update live as a user steps through code",
+      "An interactive firewall/zone config builder and a SIEM-style alert dashboard, each turning a security concept into something you click through rather than read",
+      "11 sites, zero backend or build step: plain HTML/CSS/JS deployed straight to GitHub Pages",
+    ],
+    stats: [
+      { value: "11", label: "interactive sites" },
+      { value: "0", label: "backend or build step" },
+      { value: "100%", label: "deployed on GitHub Pages" },
+    ],
+    problem: [
+      "Most TryHackMe room write-ups are static text and screenshots. I wanted each one I built to be something a visitor could actually interact with, so the underlying concept clicks faster than reading about it would.",
+      "That meant picking a different interactive mechanic per topic: a real emulator for assembly, a draggable config builder for network security, a quiz-weighted simulator for risk management, and click-through narratives for threat modeling and red-teaming.",
+    ],
+    built: [
+      {
+        icon: "zap",
+        title: "x86 Assembly Emulator",
+        body: "An interactive instruction emulator: registers, flags and the stack update live as instructions run, next to an illustrated puzzle asking what a given instruction does.",
+      },
+      {
+        icon: "chart",
+        title: "Risk Management simulator",
+        body: "A quiz-style sim that weighs asset value, risk and ALE, then asks the user to decide whether to implement or decline a safeguard.",
+      },
+      {
+        icon: "users",
+        title: "Threat Emulation & Red Team game",
+        body: "A choose-your-technique game emulating a threat actor across rounds of questions, plus comic-style slides walking through a red-team engagement's planning, execution and reporting stages.",
+      },
+      {
+        icon: "layers",
+        title: "STRIDE & PASTA threat modeling",
+        body: "Two visual walkthroughs applying the STRIDE and PASTA threat-modeling frameworks to a shared sample scenario.",
+      },
+      {
+        icon: "eye",
+        title: "SOC analyst & security engineer sims",
+        body: "A SIEM-style alert dashboard for spotting a malicious IP and an inbox simulator that turns unread emails into a security engineer's task list.",
+      },
+      {
+        icon: "shield",
+        title: "Secure Network Architecture",
+        body: "An interactive firewall and zone config builder: reproduce the visualized packet flow across zones to retrieve the flag.",
+      },
+    ],
+    decisions: [
+      "Built with plain HTML, CSS and JavaScript and no backend or build step, so every site loads instantly and deploys as a static GitHub Pages site.",
+      "Gave each room its own interactive mechanic instead of a slide deck — a working emulator, a draggable config builder, a weighted quiz — to make the concept something you do, not just read.",
+    ],
+    gallery: [
+      { src: "/projects/tryhackme/assembly-emulator.webp", alt: "x86 Assembly Emulator", caption: "x86 Assembly Emulator: registers, flags and the stack update live.", width: 800, height: 505 },
+      { src: "/projects/tryhackme/secure-network-architecture.webp", alt: "Secure Network Architecture builder", caption: "Secure Network Architecture: build a firewall/zone config to match the visualized packet flow.", width: 800, height: 505 },
+      { src: "/projects/tryhackme/threat-modeling-stride.webp", alt: "STRIDE threat modeling walkthrough", caption: "Threat Modeling: a visual walkthrough applying the STRIDE framework.", width: 800, height: 500 },
+      { src: "/projects/tryhackme/junior-sec-analyst.webp", alt: "Junior security analyst SIEM sim", caption: "A Day in the Life of a Junior Security Analyst: inspect alerts, spot the malicious IP.", width: 800, height: 500 },
+      { src: "/projects/tryhackme/red-team-fundamentals.webp", alt: "Red team engagement slides", caption: "A Simple Red Team Engagement: comic-style slides through planning, execution and reporting.", width: 800, height: 500 },
+      { src: "/projects/tryhackme/risk-management.webp", alt: "Risk management quiz", caption: "Risk Management: weigh asset, risk and ALE values and decide on a safeguard.", width: 800, height: 500 },
+      { src: "/projects/tryhackme/threat-emulation.webp", alt: "Threat emulation game", caption: "Threat Emulation: a choose-your-technique game across rounds of questions.", width: 800, height: 500 },
+      { src: "/projects/tryhackme/vulnerabilities101.webp", alt: "Vulnerability walkthrough", caption: "Vulnerabilities Showcase: a pentest-narrative walkthrough of a fictional client's app.", width: 800, height: 500 },
+    ],
+  },
 ];
 
 export const getProject = (slug: string) => projects.find((p) => p.slug === slug);
