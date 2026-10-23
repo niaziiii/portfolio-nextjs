@@ -190,13 +190,13 @@ export const projects: Project[] = [
   {
     slug: "stackly",
     name: "Stackly",
-    company: "Infiniti Business Solutions",
+    company: "Adabra",
     logo: "/logos/stackly.png",
-    companyLogo: "/logos/infiniti.jpg",
+    companyLogo: "/logos/adabra.jpg",
     tagline: "An all-in-one platform for agencies: websites, funnels, CRM and client projects.",
     summary:
-      "At Infiniti Business Solutions (US, remote) I build core modules of Stackly (Agency Eleva): a GrapesJS page and funnel builder with Magnus Intelligence AI generation, a template gallery, CRM reporting and the client workspace.",
-    context: "Infiniti Business Solutions · 2024 – present",
+      "At Adabra (Dubai, remote) I build core modules of Stackly (Agency Eleva): a GrapesJS page and funnel builder with Magnus Intelligence AI generation, a template gallery, CRM reporting and the client workspace.",
+    context: "Adabra · 2024 – present",
     role: "Full Stack Developer: Pages, AI generation, Funnels, CRM reporting, Clients/Projects",
     timeline: "Jun 2024 – present",
     links: [

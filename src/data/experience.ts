@@ -15,12 +15,12 @@ export type Role = {
 
 export const experience: Role[] = [
   {
-    company: "Infiniti Business Solutions",
-    logo: "/logos/infiniti.jpg",
+    company: "Adabra",
+    logo: "/logos/adabra.jpg",
     title: "Full Stack Developer",
     start: "Jun 2024",
     end: "Present",
-    location: "Remote · US-based company",
+    location: "Remote · Dubai, UAE",
     type: "Full-time",
     summary:
       "Building Stackly, an all-in-one platform for agencies that covers websites, funnels, CRM and client projects.",
