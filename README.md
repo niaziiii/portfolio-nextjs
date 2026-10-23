@@ -29,7 +29,7 @@ All content lives in typed files under `src/data/`:
 | `projects.ts` | Case studies: summary, highlights, stats, decisions, screenshot gallery |
 | `skills.tsx` | Skill groups and icons |
 
-Screenshots live in `public/projects/<slug>/` (WebP, about 1600px wide). Résumé PDFs live in `public/resume/` and are generated from `../resumes/source`.
+Screenshots live in `public/projects/<slug>/` (WebP, about 1600px wide). Résumé PDFs live in `public/resume/` and are generated from `../job/documents/resumes/source`.
 
 ## Getting started
 
