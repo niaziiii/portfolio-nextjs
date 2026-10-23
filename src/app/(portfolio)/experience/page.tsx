@@ -10,7 +10,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Experience",
   description:
-    "Full Stack Developer at Adabra (Dubai, remote), previously Software Engineer at Smart Engineering & Design Solutions and Software Engineer Intern at Pixako Technologies.",
+    "Most recently Senior Frontend Engineer at Adabra (Dubai, remote), previously Software Engineer at Smart Engineering & Design Solutions and Software Engineer Intern at Pixako Technologies.",
   alternates: { canonical: "/experience" },
 };
 

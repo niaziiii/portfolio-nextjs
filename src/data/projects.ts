@@ -195,15 +195,15 @@ export const projects: Project[] = [
     companyLogo: "/logos/adabra.jpg",
     tagline: "An all-in-one platform for agencies: websites, funnels, CRM and client projects.",
     summary:
-      "At Adabra (Dubai, remote) I build core modules of Stackly (Agency Eleva): a GrapesJS page and funnel builder with Magnus Intelligence AI generation, a template gallery, CRM reporting and the client workspace.",
-    context: "Adabra · 2024 – present",
-    role: "Full Stack Developer: Pages, AI generation, Funnels, CRM reporting, Clients/Projects",
-    timeline: "Jun 2024 – present",
+      "At Adabra (Dubai, remote) I built the frontend of core modules of Stackly (Agency Eleva): a GrapesJS page and funnel builder with Magnus Intelligence AI generation, a template gallery, CRM reporting and the client workspace.",
+    context: "Adabra · 2024 – 2026",
+    role: "Senior Frontend Engineer: Pages, AI generation, Funnels, CRM reporting, Clients/Projects",
+    timeline: "Jun 2024 – Oct 2026",
     links: [
       { label: "Case study", href: "/projects/stackly", kind: "case" },
       { label: "dev.agencyeleva.com", href: "https://dev.agencyeleva.com", kind: "private", note: "Login required · access on request" },
     ],
-    stack: ["React", "Node.js", "Express", "MongoDB", "GrapesJS", "TypeScript", "AI/LLM APIs", "REST APIs"],
+    stack: ["React", "Vite", "GrapesJS", "TypeScript", "AI/LLM APIs", "REST APIs"],
     cover: shot(
       "/projects/stackly/pages-editor.webp",
       "Stackly page editor with device previews, motion, layers and publish",

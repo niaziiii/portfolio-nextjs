@@ -38,9 +38,9 @@ export default function AboutPage() {
                 top.
               </p>
               <p className="text-pretty">
-                Since 2024 I&apos;ve worked remotely for a US-based company on Stackly, an all-in-one platform for
-                agencies, where I build the GrapesJS page and funnel builder, its AI generation, CRM reporting and the
-                client workspace. In 2026 I designed and launched{" "}
+                From 2024 to 2026 I worked remotely for Adabra (Dubai) as Senior Frontend Engineer on Stackly, an
+                all-in-one platform for agencies, where I built the GrapesJS page and funnel builder, its AI
+                generation, CRM reporting and the client workspace. In 2026 I designed and launched{" "}
                 <a href="/projects/onefeeokr" className="font-medium text-ink underline decoration-line-strong underline-offset-4 hover:decoration-accent">
                   OneFeeOKR
                 </a>{" "}

@@ -17,21 +17,21 @@ export const experience: Role[] = [
   {
     company: "Adabra",
     logo: "/logos/adabra.jpg",
-    title: "Full Stack Developer",
+    title: "Senior Frontend Engineer",
     start: "Jun 2024",
-    end: "Present",
+    end: "Oct 2026",
     location: "Remote · Dubai, UAE",
     type: "Full-time",
     summary:
-      "Building Stackly, an all-in-one platform for agencies that covers websites, funnels, CRM and client projects.",
+      "Built the frontend of Stackly, an all-in-one platform for agencies that covers websites, funnels, CRM and client projects. Joined as Associate Frontend Engineer and was promoted to Senior Frontend Engineer.",
     highlights: [
-      "Built and own four core Stackly modules (Pages, Funnels, CRM reporting and Clients/Projects) on React, Node.js/Express and MongoDB, from schema and API design through code review, QA and release.",
+      "Owned the React/Vite frontend of four core Stackly modules (Pages, Funnels, CRM reporting and Clients/Projects), from component design and state through code review, QA and release.",
       "Engineered a GrapesJS visual editor with drag-and-drop blocks, device previews, layers, motion, inline rich-text editing, sub-pages and publishing to custom domains.",
       "Integrated Magnus Intelligence (AI) into the editor: prompt-to-landing-page in standard and 3D layouts, section-level generation, and file and image attachments previewed in the editor.",
       "Delivered 17 ready-made funnel templates on the shared editor core, CRM dashboards with a report builder (filters, metrics, five chart types) and the client workspace (brief, tasks, boards, notes, media, chat).",
-      "Designed REST contracts with typed React consumers, tuned hot MongoDB queries with targeted indexes, and set up CI/CD and peer-review standards for the team.",
+      "Consumed REST APIs with typed React data contracts, and worked within the team's CI/CD and peer-review process.",
     ],
-    stack: ["React", "Node.js", "Express", "MongoDB", "GrapesJS", "TypeScript", "AI/LLM APIs"],
+    stack: ["React", "Vite", "GrapesJS", "TypeScript", "AI/LLM APIs"],
     project: { label: "Stackly case study", href: "/projects/stackly" },
   },
   {

@@ -50,8 +50,8 @@ export default function Hero() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted text-pretty">
-          3.5+ years shipping React, Next.js, Node.js and TypeScript. I build Stackly&apos;s page and funnel
-          builder (with AI generation) for a US-based company, and I designed and launched{" "}
+          3.5+ years shipping React, Next.js, Node.js and TypeScript. I built Stackly&apos;s page and funnel
+          builder (with AI generation) at Adabra, and I designed and launched{" "}
           <a href="/projects/onefeeokr" className="font-medium text-ink underline decoration-line-strong underline-offset-4 hover:decoration-accent">
             OneFeeOKR
           </a>{" "}
