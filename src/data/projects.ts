@@ -350,10 +350,12 @@ export const projects: Project[] = [
     name: "TryHackMe Showcases",
     tagline: "11 interactive static sites turning cybersecurity concepts into click-through simulations.",
     summary:
-      "Eleven standalone sites I designed and built to showcase TryHackMe room concepts as interactive simulations: a working x86 instruction emulator, a STRIDE/PASTA threat-modeling walkthrough, a SIEM-alert triage sim and more, deployed as static pages via GitHub Pages.",
-    context: "Personal project · 2024",
-    role: "Design and front-end engineering (solo)",
-    timeline: "2024",
+      "Eleven of the 40+ interactive sites I built at Smart Engineering & Design Solutions to present TryHackMe room concepts as simulations: a working x86 instruction emulator, a STRIDE/PASTA threat-modeling walkthrough, a SIEM-alert triage sim and more, deployed as static pages via GitHub Pages.",
+    company: "Smart Engineering & Design Solutions",
+    companyLogo: "/logos/smart-engineering.jpg",
+    context: "Smart Engineering & Design Solutions · 2023 – 2024",
+    role: "Front-end engineering, built from content specs",
+    timeline: "Jul 2023 – Jun 2024",
     links: [
       { label: "Live hub", href: "https://niaziiii.github.io/static-sites-tryhackme/", kind: "live" },
       { label: "Code", href: "https://github.com/niaziiii/static-sites-tryhackme", kind: "code" },
@@ -366,12 +368,12 @@ export const projects: Project[] = [
       "11 sites, zero backend or build step: plain HTML/CSS/JS deployed straight to GitHub Pages",
     ],
     stats: [
-      { value: "11", label: "interactive sites" },
-      { value: "0", label: "backend or build step" },
+      { value: "40+", label: "sites built" },
+      { value: "11", label: "public showcases" },
       { value: "100%", label: "deployed on GitHub Pages" },
     ],
     problem: [
-      "Most TryHackMe room write-ups are static text and screenshots. I wanted each one I built to be something a visitor could actually interact with, so the underlying concept clicks faster than reading about it would.",
+      "Most TryHackMe room write-ups are static text and screenshots. Each site I built from a content spec had to be something a visitor could actually interact with, so the underlying concept clicks faster than reading about it would.",
       "That meant picking a different interactive mechanic per topic: a real emulator for assembly, a draggable config builder for network security, a quiz-weighted simulator for risk management, and click-through narratives for threat modeling and red-teaming.",
     ],
     built: [

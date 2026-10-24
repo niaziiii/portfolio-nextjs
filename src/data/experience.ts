@@ -79,9 +79,9 @@ export const experience: Role[] = [
     company: "Freelance",
     title: "Full-Stack Developer",
     start: "2020",
-    end: "2024",
+    end: "2023",
     location: "Remote",
-    type: "Part-time · during university and on weekends",
+    type: "Part-time · during and after university",
     summary: "Paid client projects built end to end, in whatever stack the client needed.",
     highlights: [
       "Delivered e-commerce and merchant stores, inventory and management systems, CRMs, web scrapers, landing pages and portfolio sites for clients.",
