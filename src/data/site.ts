@@ -5,7 +5,7 @@ export const site = {
   role: "Full-Stack Engineer",
   tagline: "Full-stack engineer building SaaS products end to end.",
   description:
-    "Full-stack engineer with 3.5+ years shipping React, Next.js, Node.js and TypeScript products: multi-tenant SaaS, real-time collaboration, billing, integrations and AI-powered editors.",
+    "Full-stack engineer with 5+ years shipping React, Next.js, Node.js and TypeScript products: multi-tenant SaaS, real-time collaboration, billing, integrations and AI-powered editors.",
   url: "https://portfolio-nextjs-niaziiii.vercel.app",
   location: "Multan, Pakistan",
   availability: "Open to new roles · Remote or relocation",

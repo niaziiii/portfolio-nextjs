@@ -212,13 +212,13 @@ export const projects: Project[] = [
     highlights: [
       "GrapesJS editor with device previews, layers, motion, inline rich-text editing, sub-pages and publishing",
       "Magnus Intelligence AI in the editor: full landing pages (standard and 3D) and sections, with file and image context",
-      "17 funnel templates, plus CRM dashboards with a report builder (filters, metrics, five chart types)",
+      "30+ page templates and 17 funnel step types, plus a CRM reporting suite with 10 report types (filters, metrics, five chart types)",
     ],
     stats: [
-      { value: "4", label: "modules owned" },
-      { value: "17", label: "funnel templates" },
       { value: "2", label: "AI page modes" },
-      { value: "5", label: "report chart types" },
+      { value: "30+", label: "page templates" },
+      { value: "17", label: "funnel step types" },
+      { value: "10", label: "CRM report types" },
     ],
     problem: [
       "Agencies juggle separate tools for client websites, landing-page funnels, CRM and project tracking. Stackly puts them in one workspace so an agency can build, publish and report for every client in one place.",

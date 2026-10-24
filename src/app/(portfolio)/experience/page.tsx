@@ -21,7 +21,7 @@ export default function ExperiencePage() {
         <Container>
           <Eyebrow>Experience</Eyebrow>
           <h1 className="mt-3 max-w-3xl text-4xl font-semibold tracking-tight text-balance sm:text-5xl">
-            3.5+ years shipping production web apps
+            5+ years shipping production web apps
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted text-pretty">
             Full-stack work across React, Next.js, Node.js, MongoDB and PostgreSQL, from internal retail systems to

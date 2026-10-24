@@ -8,7 +8,7 @@ Personal site of Muhabat Khan Niazi, full-stack engineer (React, Next.js, Node.j
 
 ## What's inside
 
-- Case studies with real screenshots: [OneFeeOKR](https://portfolio-nextjs-niaziiii.vercel.app/projects/onefeeokr) (solo-built OKR SaaS) and [Stackly](https://portfolio-nextjs-niaziiii.vercel.app/projects/stackly) (agency platform with a GrapesJS page and funnel builder and AI generation)
+- Case studies with real screenshots: [OneFeeOKR](https://portfolio-nextjs-niaziiii.vercel.app/projects/onefeeokr) (OKR SaaS I built) and [Stackly](https://portfolio-nextjs-niaziiii.vercel.app/projects/stackly) (agency platform with a GrapesJS page and funnel builder and AI generation)
 - Experience timeline, skills, contact, and three downloadable résumés (full-stack, frontend, backend)
 - Light and dark themes with no flash on load, scroll reveals that respect reduced motion, and a keyboard-accessible screenshot lightbox
 - Static pages only: every route is prerendered, with no database or API to keep running

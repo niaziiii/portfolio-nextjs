@@ -32,7 +32,7 @@ export default function AboutPage() {
             </h1>
             <div className="mt-8 space-y-5 text-lg leading-relaxed text-muted">
               <p className="text-pretty">
-                I&apos;m a full-stack engineer from Multan, Pakistan with 3.5+ years of professional experience. I
+                I&apos;m a full-stack engineer from Multan, Pakistan with 5+ years of experience, freelance since 2020 and full-time since 2023. I
                 started on frontend work, building component libraries and server-rendered pages with React and
                 Next.js, and grew into owning whole features: data models, APIs, background jobs and the interfaces on
                 top.

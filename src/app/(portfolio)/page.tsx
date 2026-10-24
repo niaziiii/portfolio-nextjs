@@ -62,7 +62,7 @@ export default function Home() {
         <Container>
           <SectionHeading
             eyebrow="Experience"
-            title="3.5+ years building for the web"
+            title="5+ years building for the web"
             action={<MoreLink href="/experience">Full experience</MoreLink>}
           />
           <Reveal>
