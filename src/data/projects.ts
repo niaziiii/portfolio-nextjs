@@ -358,7 +358,6 @@ export const projects: Project[] = [
     timeline: "Jul 2023 – Jun 2024",
     links: [
       { label: "Live hub", href: "https://niaziiii.github.io/static-sites-tryhackme/", kind: "live" },
-      { label: "Code", href: "https://github.com/niaziiii/static-sites-tryhackme", kind: "code" },
     ],
     stack: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
     cover: { src: "/projects/tryhackme/assembly-emulator.webp", alt: "x86 Assembly Emulator with live registers, flags and stack", caption: "x86 Assembly Emulator: registers, flags and the stack update live as instructions run.", width: 800, height: 505 },
