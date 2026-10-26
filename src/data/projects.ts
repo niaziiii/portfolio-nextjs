@@ -46,6 +46,7 @@ export type Project = {
   links: ProjectLink[];
   stack: string[];
   cover?: Shot;
+  visualNote?: string;
   highlights: string[];
   stats: { value: string; label: string }[];
   problem: string[];
@@ -346,21 +347,20 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "tryhackme-showcases",
-    name: "TryHackMe Showcases",
+    slug: "cybersecurity-training-sims",
+    name: "Security Lab — Cybersecurity Simulations",
     tagline: "11 interactive static sites turning cybersecurity concepts into click-through simulations.",
     summary:
-      "Eleven of the 40+ interactive sites I built at Smart Engineering & Design Solutions to present TryHackMe room concepts as simulations: a working x86 instruction emulator, a STRIDE/PASTA threat-modeling walkthrough, a SIEM-alert triage sim and more, deployed as static pages via GitHub Pages.",
+      "Eleven of the 40+ interactive cybersecurity learning sites I built at Smart Engineering & Design Solutions: a working x86 instruction emulator, a STRIDE/PASTA threat-modeling walkthrough, a SIEM-alert triage sim and more, deployed as static pages via GitHub Pages.",
     company: "Smart Engineering & Design Solutions",
     companyLogo: "/logos/smart-engineering.jpg",
     context: "Smart Engineering & Design Solutions · 2023 – 2024",
     role: "Front-end engineering, built from content specs",
     timeline: "Jul 2023 – Jun 2024",
-    links: [
-      { label: "Live hub", href: "https://niaziiii.github.io/static-sites-tryhackme/", kind: "live" },
-    ],
+    links: [],
     stack: ["HTML", "CSS", "JavaScript", "GitHub Pages"],
-    cover: { src: "/projects/tryhackme/assembly-emulator.webp", alt: "x86 Assembly Emulator with live registers, flags and stack", caption: "x86 Assembly Emulator: registers, flags and the stack update live as instructions run.", width: 800, height: 505 },
+    cover: { src: "/projects/security-lab/assembly-emulator.webp", alt: "Concept illustration of an assembly emulator with instructions, registers, memory and flags", caption: "Assembly emulator concept illustration", width: 1200, height: 750 },
+    visualNote: "Security Lab is a fictional name. These interface illustrations represent the concepts in the original work; they are not screenshots of the original sites.",
     highlights: [
       "A working x86 instruction emulator where registers, flags and the stack update live as a user steps through code",
       "An interactive firewall/zone config builder and a SIEM-style alert dashboard, each turning a security concept into something you click through rather than read",
@@ -372,7 +372,7 @@ export const projects: Project[] = [
       { value: "100%", label: "deployed on GitHub Pages" },
     ],
     problem: [
-      "Most TryHackMe room write-ups are static text and screenshots. Each site I built from a content spec had to be something a visitor could actually interact with, so the underlying concept clicks faster than reading about it would.",
+      "Traditional security training often relies on static text and screenshots. Each site I built from a content spec turns its underlying concept into something a visitor can interact with.",
       "That meant picking a different interactive mechanic per topic: a real emulator for assembly, a draggable config builder for network security, a quiz-weighted simulator for risk management, and click-through narratives for threat modeling and red-teaming.",
     ],
     built: [
@@ -412,14 +412,14 @@ export const projects: Project[] = [
       "Gave each room its own interactive mechanic instead of a slide deck — a working emulator, a draggable config builder, a weighted quiz — to make the concept something you do, not just read.",
     ],
     gallery: [
-      { src: "/projects/tryhackme/assembly-emulator.webp", alt: "x86 Assembly Emulator", caption: "x86 Assembly Emulator: registers, flags and the stack update live.", width: 800, height: 505 },
-      { src: "/projects/tryhackme/secure-network-architecture.webp", alt: "Secure Network Architecture builder", caption: "Secure Network Architecture: build a firewall/zone config to match the visualized packet flow.", width: 800, height: 505 },
-      { src: "/projects/tryhackme/threat-modeling-stride.webp", alt: "STRIDE threat modeling walkthrough", caption: "Threat Modeling: a visual walkthrough applying the STRIDE framework.", width: 800, height: 500 },
-      { src: "/projects/tryhackme/junior-sec-analyst.webp", alt: "Junior security analyst SIEM sim", caption: "A Day in the Life of a Junior Security Analyst: inspect alerts, spot the malicious IP.", width: 800, height: 500 },
-      { src: "/projects/tryhackme/red-team-fundamentals.webp", alt: "Red team engagement slides", caption: "A Simple Red Team Engagement: comic-style slides through planning, execution and reporting.", width: 800, height: 500 },
-      { src: "/projects/tryhackme/risk-management.webp", alt: "Risk management quiz", caption: "Risk Management: weigh asset, risk and ALE values and decide on a safeguard.", width: 800, height: 500 },
-      { src: "/projects/tryhackme/threat-emulation.webp", alt: "Threat emulation game", caption: "Threat Emulation: a choose-your-technique game across rounds of questions.", width: 800, height: 500 },
-      { src: "/projects/tryhackme/vulnerabilities101.webp", alt: "Vulnerability walkthrough", caption: "Vulnerabilities Showcase: a pentest-narrative walkthrough of a fictional client's app.", width: 800, height: 500 },
+      { src: "/projects/security-lab/assembly-emulator.webp", alt: "Assembly emulator concept with instructions, registers, memory and flags", caption: "Concept: step through assembly instructions and inspect the processor state.", width: 1200, height: 750 },
+      { src: "/projects/security-lab/network-architecture.webp", alt: "Network architecture concept with zones, firewall rules and validation checks", caption: "Concept: map network zones and configure firewall rules.", width: 1200, height: 750 },
+      { src: "/projects/security-lab/threat-modeling.webp", alt: "Threat modeling concept with a system flow and STRIDE categories", caption: "Concept: apply STRIDE categories to a sample system.", width: 1200, height: 750 },
+      { src: "/projects/security-lab/soc-alert-triage.webp", alt: "Security operations concept with an alert queue and evidence details", caption: "Concept: inspect a security alert and its evidence.", width: 1200, height: 750 },
+      { src: "/projects/security-lab/red-team-engagement.webp", alt: "Red team engagement concept with phases, scope and activity choices", caption: "Concept: plan the phases of a controlled red team engagement.", width: 1200, height: 750 },
+      { src: "/projects/security-lab/risk-management.webp", alt: "Risk management concept with inputs, loss estimate and decision options", caption: "Concept: compare expected loss with the cost of a safeguard.", width: 1200, height: 750 },
+      { src: "/projects/security-lab/threat-emulation.webp", alt: "Threat emulation concept with scenario progress and response choices", caption: "Concept: choose a response in a fictional threat scenario.", width: 1200, height: 750 },
+      { src: "/projects/security-lab/vulnerability-walkthrough.webp", alt: "Vulnerability walkthrough concept with an application map and findings", caption: "Concept: review findings in a fictional practice application.", width: 1200, height: 750 },
     ],
   },
 ];

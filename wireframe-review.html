@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Security Lab — Concept Review</title>
+  <style>
+    * { box-sizing: border-box }
+    body { margin:0; background:#edf2f7; color:#182b42; font:15px/1.5 "Segoe UI",Arial,sans-serif }
+    main { max-width:1360px; margin:auto; padding:48px 30px 72px }
+    header { display:flex; align-items:end; justify-content:space-between; gap:26px; margin:0 0 32px }
+    .eyebrow { color:#287a85; font-size:11px; font-weight:800; letter-spacing:.15em; text-transform:uppercase }
+    h1 { margin:8px 0 8px; font-size:clamp(30px,4vw,46px); letter-spacing:-.045em; line-height:1.1 }
+    .intro { max-width:700px; margin:0; color:#617387 }
+    .status { flex:none; padding:9px 13px; border:1px solid #cbdbe7; border-radius:999px; background:#fff; color:#536d82; font-size:12px; font-weight:700 }
+    .status:before { display:inline-block; width:7px; height:7px; margin-right:8px; border-radius:50%; background:#3db8aa; content:"" }
+    .grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:22px }
+    article { min-width:0; overflow:hidden; border:1px solid #d5e0ea; border-radius:14px; background:#fff; box-shadow:0 8px 25px #1c3d5c0b }
+    .card-head { display:flex; align-items:center; justify-content:space-between; gap:14px; padding:17px 19px 14px }
+    h2 { margin:0; font-size:16px; letter-spacing:-.015em }
+    .number { color:#8a9bad; font-size:11px; font-weight:800; letter-spacing:.06em; white-space:nowrap }
+    .preview { display:block; width:calc(100% - 28px); margin:0 14px; padding:0; overflow:hidden; border:0; border-radius:8px; background:#0b1321; cursor:zoom-in }
+    .preview:focus-visible,.close:focus-visible { outline:3px solid #4aa6b1; outline-offset:3px }
+    .preview img { display:block; width:100%; height:auto }
+    .card-foot { display:flex; align-items:center; justify-content:space-between; gap:12px; padding:13px 19px 16px }
+    .caption { margin:0; color:#6a7c8e; font-size:12px }
+    .open { flex:none; color:#287a85; font-size:12px; font-weight:750; text-decoration:none }
+    .open:hover { text-decoration:underline }
+    dialog { width:min(1280px,calc(100% - 32px)); max-width:none; max-height:calc(100% - 32px); padding:0; overflow:hidden; border:1px solid #d5e0ea; border-radius:14px; background:#fff; box-shadow:0 25px 90px #07182b80 }
+    dialog::backdrop { background:#0a192bd9 }
+    .dialog-head { display:flex; align-items:center; justify-content:space-between; gap:15px; padding:14px 18px; color:#253e55; font-size:14px; font-weight:700 }
+    .dialog-help { display:block; color:#7a8a9c; font-size:11px; font-weight:400 }
+    .close { width:34px; height:34px; flex:none; border:1px solid #d8e2eb; border-radius:50%; background:#f5f8fb; color:#4c6177; font-size:20px; cursor:pointer }
+    .image-scroll { max-height:calc(100vh - 120px); overflow:auto; background:#101c2c }
+    .image-scroll img { display:block; width:1200px; max-width:none; height:auto }
+    @media(max-width:900px) { .grid{grid-template-columns:1fr} header{align-items:start;flex-direction:column;gap:16px} }
+    @media(max-width:520px) { main{padding:28px 12px 48px}.grid{gap:15px}.card-head{padding:14px 15px 11px}.card-foot{padding:11px 15px 14px}.caption{font-size:11px}.preview{width:calc(100% - 20px);margin:0 10px}.status{font-size:11px} }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <div class="eyebrow">Portfolio concept review</div>
+      <h1>Security Lab</h1>
+      <p class="intro">Eight independent interface concepts for the cybersecurity training project. Select an image to inspect the complete design at full size.</p>
+    </div>
+    <div class="status">Preview awaiting your approval</div>
+  </header>
+  <section class="grid" aria-label="Interface concepts">
+    <article><div class="card-head"><h2>Assembly emulator</h2><span class="number">01 / 08</span></div><button class="preview" type="button" aria-label="Enlarge assembly emulator concept"><img src="wireframe-concepts/assembly-emulator.svg" alt="Assembly emulator with code, registers, memory and flags"></button><div class="card-foot"><p class="caption">Code, registers and memory in one workspace.</p><a class="open" href="wireframe-concepts/assembly-emulator.svg" target="_blank">Open image ↗</a></div></article>
+    <article><div class="card-head"><h2>Secure network architecture</h2><span class="number">02 / 08</span></div><button class="preview" type="button" aria-label="Enlarge secure network architecture concept"><img src="wireframe-concepts/network-architecture.svg" alt="Network zones connected in a topology with firewall rules and checks"></button><div class="card-foot"><p class="caption">A network map, firewall rules and validation.</p><a class="open" href="wireframe-concepts/network-architecture.svg" target="_blank">Open image ↗</a></div></article>
+    <article><div class="card-head"><h2>STRIDE threat modeling</h2><span class="number">03 / 08</span></div><button class="preview" type="button" aria-label="Enlarge STRIDE threat modeling concept"><img src="wireframe-concepts/threat-modeling.svg" alt="A system flow and six STRIDE threat categories"></button><div class="card-foot"><p class="caption">A system flow paired with the six STRIDE categories.</p><a class="open" href="wireframe-concepts/threat-modeling.svg" target="_blank">Open image ↗</a></div></article>
+    <article><div class="card-head"><h2>SOC alert triage</h2><span class="number">04 / 08</span></div><button class="preview" type="button" aria-label="Enlarge SOC alert triage concept"><img src="wireframe-concepts/soc-alert-triage.svg" alt="Security operations dashboard with an alert queue and evidence details"></button><div class="card-foot"><p class="caption">An alert queue and a focused investigation panel.</p><a class="open" href="wireframe-concepts/soc-alert-triage.svg" target="_blank">Open image ↗</a></div></article>
+    <article><div class="card-head"><h2>Red team engagement</h2><span class="number">05 / 08</span></div><button class="preview" type="button" aria-label="Enlarge red team engagement concept"><img src="wireframe-concepts/red-team-engagement.svg" alt="Red team engagement phases, scope brief and next-step choices"></button><div class="card-foot"><p class="caption">A scoped engagement from planning to reporting.</p><a class="open" href="wireframe-concepts/red-team-engagement.svg" target="_blank">Open image ↗</a></div></article>
+    <article><div class="card-head"><h2>Risk management</h2><span class="number">06 / 08</span></div><button class="preview" type="button" aria-label="Enlarge risk management concept"><img src="wireframe-concepts/risk-management.svg" alt="Risk calculation with asset inputs, annual loss estimate and decisions"></button><div class="card-foot"><p class="caption">Scenario values, estimated loss and decision options.</p><a class="open" href="wireframe-concepts/risk-management.svg" target="_blank">Open image ↗</a></div></article>
+    <article><div class="card-head"><h2>Threat emulation</h2><span class="number">07 / 08</span></div><button class="preview" type="button" aria-label="Enlarge threat emulation concept"><img src="wireframe-concepts/threat-emulation.svg" alt="Threat emulation scenario with campaign progress and response choices"></button><div class="card-foot"><p class="caption">A fictional incident with choices at each stage.</p><a class="open" href="wireframe-concepts/threat-emulation.svg" target="_blank">Open image ↗</a></div></article>
+    <article><div class="card-head"><h2>Vulnerability walkthrough</h2><span class="number">08 / 08</span></div><button class="preview" type="button" aria-label="Enlarge vulnerability walkthrough concept"><img src="wireframe-concepts/vulnerability-walkthrough.svg" alt="Fictional application map with findings and mitigation details"></button><div class="card-foot"><p class="caption">A practice application, findings and suggested fixes.</p><a class="open" href="wireframe-concepts/vulnerability-walkthrough.svg" target="_blank">Open image ↗</a></div></article>
+  </section>
+</main>
+<dialog aria-label="Expanded concept preview">
+  <div class="dialog-head"><div><span id="dialog-title"></span><span class="dialog-help">Scroll to explore the full-size image.</span></div><button type="button" class="close" aria-label="Close preview">×</button></div>
+  <div class="image-scroll"><img alt=""></div>
+</dialog>
+<script>
+  const dialog = document.querySelector('dialog');
+  const enlargedImage = dialog.querySelector('img');
+  document.querySelectorAll('.preview').forEach((button) => {
+    button.addEventListener('click', () => {
+      const image = button.querySelector('img');
+      enlargedImage.src = image.src;
+      enlargedImage.alt = image.alt;
+      document.querySelector('#dialog-title').textContent = button.closest('article').querySelector('h2').textContent;
+      dialog.querySelector('.image-scroll').scrollTo(0, 0);
+      dialog.showModal();
+    });
+  });
+  dialog.querySelector('.close').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', (event) => { if (event.target === dialog) dialog.close(); });
+</script>
+</body>
+</html>

@@ -44,12 +44,12 @@ export const experience: Role[] = [
     location: "Islamabad, Pakistan",
     type: "Full-time · On-site",
     summary:
-      "Built a multi-store retail management platform and 40+ interactive TryHackMe training sites, and maintained EmpowerCRM, a healthcare-staffing ATS/CRM.",
+      "Built a multi-store retail management platform and 40+ interactive cybersecurity training sites, and maintained EmpowerCRM, a healthcare-staffing ATS/CRM.",
     highlights: [
       "Built the retail platform end to end: React and Redux interface, Node.js/Express services and the relational schema behind both.",
       "Modelled 10–15 interconnected modules (inventory, sales, purchasing, suppliers, customers, accounts) for 10,000+ records with referential integrity across subsystems.",
       "Developed REST APIs for real-time inventory, stock transfers between stores and consolidated cross-location reporting.",
-      "Built 40+ interactive TryHackMe training sites from content specs in HTML, CSS and JavaScript: an x86 emulator, SIEM, firewall and inbox simulators, and quiz games (11 are live on GitHub Pages).",
+      "Built 40+ interactive cybersecurity training sites from content specs in HTML, CSS and JavaScript: an x86 emulator, SIEM, firewall and inbox simulators, and quiz games (11 are live on GitHub Pages).",
       "Maintained and extended EmpowerCRM, a healthcare-staffing CRM: fixed reported issues and shipped feature requests through Jira across its Dashboard, Jobs, Sourcing and Tasks modules.",
       "Delivered client WordPress and PHP sites alongside the product work.",
       "Kept data-heavy dashboards responsive with normalized Redux state, memoized selectors and optimized queries, and standardized shared UI components across modules.",

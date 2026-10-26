@@ -116,6 +116,7 @@ export default async function ProjectPage({ params }: Params) {
               <CoverFallback project={project} />
             )}
           </BrowserFrame>
+          {project.visualNote ? <p className="mt-3 text-sm text-faint">{project.visualNote}</p> : null}
 
           <dl className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {project.stats.map((s) => (

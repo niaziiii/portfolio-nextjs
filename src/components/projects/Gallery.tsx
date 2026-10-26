@@ -53,7 +53,7 @@ export default function Gallery({ shots, title }: { shots: Shot[]; title: string
               type="button"
               onClick={() => show(i)}
               className="group block w-full text-left"
-              aria-label={`Open screenshot: ${shot.caption ?? shot.alt}`}
+              aria-label={`Open image: ${shot.caption ?? shot.alt}`}
             >
               <div className="relative overflow-hidden rounded-xl border border-line bg-surface-2">
                 <Image
@@ -78,7 +78,7 @@ export default function Gallery({ shots, title }: { shots: Shot[]; title: string
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={`${title} screenshot ${index! + 1} of ${shots.length}`}
+          aria-label={`${title} image ${index! + 1} of ${shots.length}`}
           className="fixed inset-0 z-50 flex flex-col bg-black/90 backdrop-blur-sm"
           onClick={close}
         >
@@ -112,7 +112,7 @@ export default function Gallery({ shots, title }: { shots: Shot[]; title: string
                   type="button"
                   onClick={() => go(-1)}
                   className="absolute left-2 top-1/2 inline-flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 sm:left-4"
-                  aria-label="Previous screenshot"
+                  aria-label="Previous image"
                 >
                   <LuChevronLeft className="size-5" />
                 </button>
@@ -120,7 +120,7 @@ export default function Gallery({ shots, title }: { shots: Shot[]; title: string
                   type="button"
                   onClick={() => go(1)}
                   className="absolute right-2 top-1/2 inline-flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 sm:right-4"
-                  aria-label="Next screenshot"
+                  aria-label="Next image"
                 >
                   <LuChevronRight className="size-5" />
                 </button>

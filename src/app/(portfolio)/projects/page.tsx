@@ -25,7 +25,7 @@ export default function ProjectsPage() {
             Case studies from real products
           </h1>
           <p className="mt-5 max-w-2xl text-lg text-muted text-pretty">
-            What each product does, what I built, and the engineering decisions behind it, with real screenshots.
+            What each product does, what I built, and the engineering decisions behind it, with screenshots and interface illustrations.
           </p>
         </Container>
       </section>
